@@ -22,9 +22,17 @@
         required
       ></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Update Post</button>
-    <button type="button" (click)="cancel()" class="btn btn-secondary">
-      Cancel
-    </button>
+    <div class="d-flex justify-content-between mt-3">
+      <div>
+        <button type="submit" class="btn btn-primary">Update Post</button>
+        <button type="button" (click)="cancel()" class="btn btn-secondary">
+          Cancel
+        </button>
+      </div>
+
+      <button type="button" (click)="deletePost()" class="btn btn-danger">
+        Cancel
+      </button>
+    </div>
   </form>
 </div>
