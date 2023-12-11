@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'create', component: NewComponent },
   { path: 'edit', component: EditComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '' },
