@@ -13,10 +13,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  accedi(form: NgForm) {
+  login(form: NgForm) {
     console.log(form.value);
     try {
-      this.authSrv.login(form.value).subscribe();
+      this.authSrv.login(form.value).subscribe((response) => {
+        localStorage.setItem('token', response.accessToken);
+      });
     } catch (error) {
       alert('Login errato!');
       console.log(error);
