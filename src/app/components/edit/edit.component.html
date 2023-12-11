@@ -6,7 +6,7 @@
       <input
         type="text"
         [(ngModel)]="post.title"
-        class="form-control"
+        class="form-control my-2"
         id="title"
         name="title"
         required
@@ -16,7 +16,7 @@
       <label for="content">Content</label>
       <textarea
         [(ngModel)]="post.body"
-        class="form-control"
+        class="form-control my-2"
         id="content"
         name="content"
         required
@@ -24,12 +24,13 @@
     </div>
     <div class="d-flex justify-content-between mt-3">
       <div>
-        <button type="submit" class="btn btn-primary">Update Post</button>
-        <button type="button" (click)="cancel()" class="btn btn-secondary">
+        <button type="submit" class="btn btn-primary mt-2 me-3">
+          Update Post
+        </button>
+        <button type="button" (click)="cancel()" class="btn btn-secondary mt-2">
           Cancel
         </button>
       </div>
-
       <button type="button" (click)="deletePost()" class="btn btn-danger">
         Remove
       </button>
