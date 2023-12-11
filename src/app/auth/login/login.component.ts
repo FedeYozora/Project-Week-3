@@ -16,9 +16,7 @@ export class LoginComponent implements OnInit {
   login(form: NgForm) {
     console.log(form.value);
     try {
-      this.authSrv.login(form.value).subscribe((response) => {
-        localStorage.setItem('token', response.accessToken);
-      });
+      this.authSrv.login(form.value).subscribe();
     } catch (error) {
       alert('Login errato!');
       console.log(error);
