@@ -54,7 +54,7 @@
         <li *ngIf="!utente" class="nav-item">
           <a
             class="nav-link mx-2"
-            [routerLink]="['login']"
+            [routerLink]="['register']"
             routerLinkActive="active"
             >Register</a
           >
@@ -65,7 +65,6 @@
             (click)="logout()"
             class="nav-link mx-2 text-danger"
             style="font-size: 20px"
-            (click)="logout()"
             ><i class="bi bi-box-arrow-right"></i
           ></a>
         </li>
