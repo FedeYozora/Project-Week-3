@@ -16,14 +16,14 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'create', component: NewComponent },
-  { path: 'edit', component: EditComponent },
-  { path: 'details/:id', component: DetailsComponent },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'create', component: NewComponent, canActivate: [AuthGuard] },
   { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuard] },
-  { path: 'details', component: DetailsComponent, canActivate: [AuthGuard] },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '' },
