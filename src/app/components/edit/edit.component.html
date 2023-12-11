@@ -1,1 +1,30 @@
-<p>edit works!</p>
+<div class="edit-post">
+  <h2>Edit Post</h2>
+  <form (submit)="updatePost()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        [(ngModel)]="post.title"
+        class="form-control"
+        id="title"
+        name="title"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea
+        [(ngModel)]="post.body"
+        class="form-control"
+        id="content"
+        name="content"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Post</button>
+    <button type="button" (click)="cancel()" class="btn btn-secondary">
+      Cancel
+    </button>
+  </form>
+</div>

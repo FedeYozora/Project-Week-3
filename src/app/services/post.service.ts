@@ -12,11 +12,11 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiURL);
+    return this.http.get<Post[]>(`${this.apiURL}/posts`);
   }
 
   getPost(id: number): Observable<Post> {
-    return this.http.get<Post>(`${this.apiURL}/${id}`);
+    return this.http.get<Post>(`${this.apiURL}/posts/${id}`);
   }
 
   createPost(post: Post): Observable<Post> {
@@ -24,10 +24,10 @@ export class PostService {
   }
 
   updatePost(id: number, post: Post): Observable<Post> {
-    return this.http.put<Post>(`${this.apiURL}/${id}`, post);
+    return this.http.put<Post>(`${this.apiURL}/posts/${id}`, post);
   }
 
   deletePost(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiURL}/${id}`);
+    return this.http.delete<any>(`${this.apiURL}/posts/${id}`);
   }
 }
