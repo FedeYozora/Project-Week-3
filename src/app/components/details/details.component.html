@@ -1,1 +1,8 @@
-<p>details works!</p>
+<h2>Post Details</h2>
+
+<div class="card" style="width: 18rem" *ngIf="post">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.body }}</p>
+  </div>
+</div>

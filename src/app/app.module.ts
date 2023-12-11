@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './auth/token.interceptor';
@@ -16,6 +16,10 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'create', component: NewComponent },
+  { path: 'edit', component: EditComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'create', component: NewComponent, canActivate: [AuthGuard] },
   { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuard] },
