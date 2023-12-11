@@ -44,6 +44,7 @@ export class AuthService {
       return;
     }
     this.authSubj.next(userData);
+    this.router.navigate(['/']);
   }
 
   register(data: {
