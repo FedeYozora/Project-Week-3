@@ -15,18 +15,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div
-      *ngIf="!utente"
-      class="collapse navbar-collapse"
-      id="navbarNavDropdown"
-    >
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+        <li *ngIf="utente" class="nav-item">
           <a class="nav-link mx-2" routerLink="/" routerLinkActive="active"
             >Home</a
           >
         </li>
-        <li *ngIf="!utente" class="nav-item">
+        <li *ngIf="utente" class="nav-item">
           <a
             class="nav-link mx-2"
             routerLink="/profile"
@@ -34,7 +30,7 @@
             >Profile</a
           >
         </li>
-        <li *ngIf="!utente" class="nav-item">
+        <li *ngIf="utente" class="nav-item">
           <a
             class="nav-link mx-2"
             routerLink="/create"
@@ -42,7 +38,14 @@
             >Create</a
           >
         </li>
-        <li class="nav-item">
+
+        <li *ngIf="!utente" class="nav-item">
+          <a class="nav-link mx-2" routerLink="/login" routerLinkActive="active"
+            >Login</a
+          >
+        </li>
+
+        <li *ngIf="utente" class="nav-item">
           <a
             class="nav-link mx-2 text-danger"
             style="font-size: 20px"
@@ -50,16 +53,6 @@
             routerLinkActive="active"
             ><i class="bi bi-box-arrow-right"></i
           ></a>
-        </li>
-        <li *ngIf="utente" class="nav-item">
-          <a class="nav-link mx-2" routerLink="/login" routerLinkActive="active"
-            >Login</a
-          >
-        </li>
-        <li *ngIf="utente" class="nav-item">
-          <a class="nav-link mx-2" routerLink="/login" routerLinkActive="active"
-            >Sign in</a
-          >
         </li>
       </ul>
     </div>
