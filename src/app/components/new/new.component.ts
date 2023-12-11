@@ -9,14 +9,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./new.component.scss'],
 })
 export class NewComponent implements OnInit {
-  post!: Post;
+  userId!: number;
+
+  post: Post = {
+    userId: 0,
+    title: '',
+    body: '',
+  };
 
   constructor(private postSrv: PostService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let user = localStorage.getItem('user');
+    if (user) {
+      let userID = JSON.parse(user).user.id;
+      this.userId = userID;
+    }
+  }
 
-  addPost(form: NgForm) {
-    this.post = form.value;
+  addPost() {
+    this.post.userId = this.userId;
+
     this.postSrv.createPost(this.post).subscribe();
     this.router.navigate(['/']);
   }
