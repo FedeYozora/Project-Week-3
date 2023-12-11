@@ -27,7 +27,7 @@ export class PostService {
     return this.http.put<Post>(`${this.apiURL}/posts/${id}`, post);
   }
 
-  deletePost(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiURL}/posts/${id}`);
+  deletePost(id: number): Observable<Post> {
+    return this.http.delete<Post>(`${this.apiURL}/posts/${id}`);
   }
 }

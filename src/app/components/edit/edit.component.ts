@@ -26,7 +26,9 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = Number(this.route.snapshot.params['id']);
+    console.log(this.id);
+
     this.postService.getPost(this.id).subscribe((data) => {
       this.post = data;
     });
@@ -46,8 +48,7 @@ export class EditComponent implements OnInit {
   }
 
   deletePost(): void {
-    this.postService.deletePost(this.id).subscribe((response) => {
-      this.router.navigate(['/']);
-    });
+    this.postService.deletePost(this.id).subscribe();
+    this.router.navigate(['/']);
   }
 }
