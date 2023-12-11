@@ -47,6 +47,7 @@
 
         <li *ngIf="utente" class="nav-item">
           <a
+            (click)="logout()"
             class="nav-link mx-2 text-danger"
             style="font-size: 20px"
             routerLink="/login"
