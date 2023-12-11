@@ -47,8 +47,7 @@ export class EditComponent implements OnInit {
 
   deletePost(): void {
     this.postService.deletePost(this.id).subscribe((response) => {
-      console.log(this.id);
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
     });
   }
 }
