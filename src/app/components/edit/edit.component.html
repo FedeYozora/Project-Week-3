@@ -1,39 +1,45 @@
-<div class="edit-post">
-  <h2>Edit Post</h2>
-  <form (submit)="updatePost()">
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input
-        type="text"
-        [(ngModel)]="post.title"
-        class="form-control my-2"
-        id="title"
-        name="title"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="content">Content</label>
-      <textarea
-        [(ngModel)]="post.body"
-        class="form-control my-2"
-        id="content"
-        name="content"
-        required
-      ></textarea>
-    </div>
-    <div class="d-flex justify-content-between mt-3">
-      <div>
-        <button type="submit" class="btn btn-primary mt-2 me-3">
-          Update Post
-        </button>
-        <button type="button" (click)="cancel()" class="btn btn-secondary mt-2">
-          Cancel
+<div class="container">
+  <div class="edit-post">
+    <h2>Edit Post</h2>
+    <form (submit)="updatePost()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          [(ngModel)]="post.title"
+          class="form-control my-2"
+          id="title"
+          name="title"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea
+          [(ngModel)]="post.body"
+          class="form-control my-2"
+          id="content"
+          name="content"
+          required
+        ></textarea>
+      </div>
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+          <button type="submit" class="btn btn-primary mt-2 me-3">
+            Update Post
+          </button>
+          <button
+            type="button"
+            (click)="cancel()"
+            class="btn btn-secondary mt-2"
+          >
+            Cancel
+          </button>
+        </div>
+        <button type="button" (click)="deletePost()" class="btn btn-danger">
+          Remove
         </button>
       </div>
-      <button type="button" (click)="deletePost()" class="btn btn-danger">
-        Remove
-      </button>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
