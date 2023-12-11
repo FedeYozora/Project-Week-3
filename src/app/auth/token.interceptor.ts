@@ -31,9 +31,6 @@ export class TokenInterceptor implements HttpInterceptor {
             `Bearer ${utente.accessToken}`
           ),
         });
-
-        console.log(request);
-        console.log(this.newReq);
         return next.handle(this.newReq);
       })
     );
