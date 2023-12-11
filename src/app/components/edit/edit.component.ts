@@ -44,4 +44,10 @@ export class EditComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['']);
   }
+
+  deletePost(): void {
+    this.postService.deletePost(this.id).subscribe((response) => {
+      this.router.navigate(['/']);
+    });
+  }
 }
