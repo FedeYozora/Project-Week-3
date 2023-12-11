@@ -2,32 +2,32 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post } from '../models/post';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-
+  apiURL = environment.apiURL;
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiUrl);
+    return this.http.get<Post[]>(this.apiURL);
   }
 
   getPost(id: number): Observable<Post> {
-    return this.http.get<Post>(`${this.apiUrl}/${id}`);
+    return this.http.get<Post>(`${this.apiURL}/${id}`);
   }
 
   createPost(post: Post): Observable<Post> {
-    return this.http.post<Post>(this.apiUrl, post);
+    return this.http.post<Post>(this.apiURL, post);
   }
 
   updatePost(id: number, post: Post): Observable<Post> {
-    return this.http.put<Post>(`${this.apiUrl}/${id}`, post);
+    return this.http.put<Post>(`${this.apiURL}/${id}`, post);
   }
 
   deletePost(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+    return this.http.delete<any>(`${this.apiURL}/${id}`);
   }
 }
