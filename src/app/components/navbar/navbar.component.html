@@ -18,14 +18,18 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li *ngIf="utente" class="nav-item">
-          <a class="nav-link mx-2" routerLink="/" routerLinkActive="active"
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
             >Home</a
           >
         </li>
         <li *ngIf="utente" class="nav-item">
           <a
             class="nav-link mx-2"
-            routerLink="/profile"
+            [routerLink]="['profile']"
             routerLinkActive="active"
             >Profile</a
           >
@@ -33,24 +37,34 @@
         <li *ngIf="utente" class="nav-item">
           <a
             class="nav-link mx-2"
-            routerLink="/create"
+            [routerLink]="['create']"
             routerLinkActive="active"
             >Create</a
           >
         </li>
 
         <li *ngIf="!utente" class="nav-item">
-          <a class="nav-link mx-2" routerLink="/login" routerLinkActive="active"
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['login']"
+            routerLinkActive="active"
             >Login</a
+          >
+        </li>
+        <li *ngIf="!utente" class="nav-item">
+          <a
+            class="nav-link mx-2"
+            [routerLink]="['register']"
+            routerLinkActive="active"
+            >Register</a
           >
         </li>
 
         <li *ngIf="utente" class="nav-item">
           <a
+            (click)="logout()"
             class="nav-link mx-2 text-danger"
             style="font-size: 20px"
-            routerLink="/login"
-            routerLinkActive="active"
             ><i class="bi bi-box-arrow-right"></i
           ></a>
         </li>
