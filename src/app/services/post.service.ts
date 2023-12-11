@@ -20,7 +20,7 @@ export class PostService {
   }
 
   createPost(post: Post): Observable<Post> {
-    return this.http.post<Post>(this.apiURL, post);
+    return this.http.post<Post>(`${this.apiURL}`, post);
   }
 
   updatePost(id: number, post: Post): Observable<Post> {
