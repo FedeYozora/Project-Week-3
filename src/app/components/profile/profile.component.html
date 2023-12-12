@@ -11,7 +11,24 @@
       class="image d-flex flex-column justify-content-center align-items-center"
     >
       <button class="btn btn-secondary imageProfile">
-        <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+        <img
+          *ngIf="currentUser && currentUser.user.genre === 'male'"
+          src="https://openclipart.org/image/800px/313668"
+          height="100"
+          width="85"
+        />
+        <img
+          *ngIf="currentUser && currentUser.user.genre === 'female'"
+          src="https://i.imgur.com/wvxPV9S.png"
+          height="100"
+          width="100"
+        />
+        <img
+          *ngIf="currentUser && currentUser.user.genre === 'other'"
+          src="../../../assets/other.png"
+          height="100"
+          width="100"
+        />
       </button>
       <div class="px-2 rounded mt-4 date">
         <span class="join">Joined Dec, 2023</span>
@@ -20,6 +37,9 @@
         {{ currentUser.user.nome }}
         {{ currentUser.user.cognome }}
       </h3>
+      <div class="text mt-3">
+        <p *ngIf="currentUser">{{ currentUser.user.city }}</p>
+      </div>
       <div class="text mt-3">
         <p *ngIf="currentUser">{{ currentUser.user.email }}</p>
       </div>
