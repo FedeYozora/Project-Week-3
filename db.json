@@ -14,32 +14,13 @@
       "id": 2
     },
     {
-      "email": "peppe.barresi1@gmail.com",
-      "password": "$2a$10$XlkgaBb/9O6r7LVvxLkga.Z2RSRZovnGaDdJk6iY59EZOr.cI/upK",
-      "nome": "Giuseppe",
-      "cognome": "Barresi",
+      "email": "stemic@libero.it",
+      "password": "$2a$10$8Ag2NHTVLuwWN14E5ve7Y.zSH6nMraygdmUqkSmBxTcd2Q/SvsBSS",
+      "nome": "Stefano",
+      "cognome": "Miceli",
+      "genre": "male",
+      "city": "Udine",
       "id": 3
-    },
-    {
-      "email": "marco@marco.com",
-      "password": "$2a$10$guRTgaWZMYZWn/VEZlcYtu0MUJrGS5/pPX/1GjQZk76q8P4ze1AF2",
-      "nome": "Marco",
-      "cognome": "Rossi",
-      "id": 4
-    },
-    {
-      "email": "maurizio@gmail.com",
-      "password": "$2a$10$uWljGQ6M8M1h6c836FwdIOmj.pbbWWHfrxtZfU6gz83LiacXZGx3O",
-      "nome": "maurizio",
-      "cognome": "aaaa",
-      "id": 5
-    },
-    {
-      "email": "daniele@gmail.com",
-      "password": "$2a$10$82hpUxRCTunKofEJrhDheOxkCqrz.x1KYWJ9PtX.d9xOkiLkUS7OK",
-      "nome": "Daniele",
-      "cognome": "Cagnoni",
-      "id": 6
     }
   ],
   "posts": [
