@@ -76,6 +76,10 @@ h1 {
   transition: 0.5s;
 }
 
+.form-group input:focus{
+  box-shadow: none;
+}
+
 .form-group input:focus ~ label,
 .form-group input:focus ~ label {
   top: -5px;
