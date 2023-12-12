@@ -5,11 +5,15 @@
   <div class="container d-flex flex-column">
     <div class="row">
       <div class="col text-center">
-        <input
-          #search
-          placeholder="Search for a post"
-          (keyup)="searchPosts(search.value)"
-        />
+        <div class="input-icons">
+          <i class="bi bi-search icon"></i>
+          <input
+            #search
+            placeholder="Search for a post"
+            (keyup)="searchPosts(search.value)"
+            class="input-field"
+          />
+        </div>
       </div>
     </div>
     <div class="row">
