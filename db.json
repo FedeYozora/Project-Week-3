@@ -14,32 +14,22 @@
       "id": 2
     },
     {
-      "email": "peppe.barresi1@gmail.com",
-      "password": "$2a$10$XlkgaBb/9O6r7LVvxLkga.Z2RSRZovnGaDdJk6iY59EZOr.cI/upK",
-      "nome": "Giuseppe",
-      "cognome": "Barresi",
+      "email": "stemic@libero.it",
+      "password": "$2a$10$8Ag2NHTVLuwWN14E5ve7Y.zSH6nMraygdmUqkSmBxTcd2Q/SvsBSS",
+      "nome": "Stefano",
+      "cognome": "Miceli",
+      "genre": "male",
+      "city": "Udine",
       "id": 3
     },
     {
-      "email": "marco@marco.com",
-      "password": "$2a$10$guRTgaWZMYZWn/VEZlcYtu0MUJrGS5/pPX/1GjQZk76q8P4ze1AF2",
-      "nome": "Marco",
-      "cognome": "Rossi",
+      "email": "platinette@other.com",
+      "password": "$2a$10$VLLqv0N9OupeXslWqfmzOugR/2V1eV19XHNMtsz9SdeEFUWiMl7T.",
+      "nome": "Mauro",
+      "cognome": "Platinette",
+      "genre": "other",
+      "city": "Langhirano",
       "id": 4
-    },
-    {
-      "email": "maurizio@gmail.com",
-      "password": "$2a$10$uWljGQ6M8M1h6c836FwdIOmj.pbbWWHfrxtZfU6gz83LiacXZGx3O",
-      "nome": "maurizio",
-      "cognome": "aaaa",
-      "id": 5
-    },
-    {
-      "email": "daniele@gmail.com",
-      "password": "$2a$10$82hpUxRCTunKofEJrhDheOxkCqrz.x1KYWJ9PtX.d9xOkiLkUS7OK",
-      "nome": "Daniele",
-      "cognome": "Cagnoni",
-      "id": 6
     }
   ],
   "posts": [
@@ -82,92 +72,110 @@
     {
       "userId": 2,
       "id": 16,
-      "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
-      "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+      "title": "Average Star Wars Fan:",
+      "body": "May the Force Be With You"
     },
     {
       "userId": 2,
       "id": 17,
-      "title": "fugit voluptas sed molestias voluptatem provident",
-      "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+      "title": "Mario",
+      "body": "It's-a-me, Mario!"
     },
     {
       "userId": 2,
       "id": 18,
-      "title": "voluptate et itaque vero tempora molestiae",
-      "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+      "title": "Hi guys",
+      "body": "Hello Friends, I'm new on this forum!"
     },
     {
       "userId": 2,
       "id": 19,
-      "title": "adipisci placeat illum aut reiciendis qui",
-      "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+      "title": "Gun Sound",
+      "body": "dododoooobrapbrapppraaa"
     },
     {
       "userId": 2,
       "id": 20,
-      "title": "doloribus ad provident suscipit at",
-      "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+      "title": "Rice Burners",
+      "body": "Rice burners go wowowowowowowowowowowowowowowowowowowowowowow"
     },
     {
       "userId": 2,
-      "title": "fref",
-      "body": "fefe",
+      "title": "Oi",
+      "body": "Oi Oi Oi Oi Oi Oi Oi Oi Oi Oi\n",
       "id": 21
     },
     {
       "userId": 2,
-      "title": "fefef",
-      "body": "fefee",
+      "title": "Lawnmower",
+      "body": "Lawnmower goes shersheeeeeeerrerererereeeerrr vavavoom sherererererere",
       "id": 22
     },
     {
       "userId": 2,
-      "title": "fefe",
-      "body": "fefefe",
+      "title": "Motorboat",
+      "body": "BURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR drip drip",
       "id": 23
     },
     {
       "userId": 2,
-      "title": "fefefe",
-      "body": "fefefe",
+      "title": "Lurl",
+      "body": "lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl",
       "id": 24
     },
     {
       "userId": 2,
-      "title": "fefefe",
-      "body": "fefe",
+      "title": "Man's Not Hot",
+      "body": "The ting goes skrrrahh, pap pap ka-ka-ka Skidiki-pap-pap, and a puu-puu-poudrrr-boom Skiya, du-du-ku-ku-doom doom Poom poom, you dun now",
       "id": 25
     },
     {
       "userId": 2,
-      "title": "fefef",
-      "body": "fefefe",
+      "title": "Planes and Boats",
+      "body": "Planes go WHHHHHHHOOOOOOOOOSSSSSSSSHZZZZZZZZ and Boats go BURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR drip drip",
       "id": 26
     },
     {
       "userId": 2,
-      "title": "fdfd",
-      "body": "dfdfdf",
+      "title": "Aua",
+      "body": "auanuanaunauanaunauanuanaunaua",
       "id": 27
     },
     {
       "userId": 2,
-      "title": "dfdfd",
-      "body": "fdfdfdfd",
+      "title": "Spinkler",
+      "body": "My sprinkler goes like thisstststststststststststststststststststststststst and comes back like titttttttttttttttttttttttttttttttttttttte",
       "id": 28
     },
     {
       "userId": 2,
-      "title": "dfdfdd",
-      "body": "fddfdf",
+      "title": "Banana",
+      "body": "bananananananabanabananabanannanabanananana",
       "id": 30
     },
     {
       "userId": 2,
-      "title": "dfdfd",
-      "body": "fdfd",
+      "title": "@",
+      "body": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
       "id": 31
+    },
+    {
+      "userId": 2,
+      "title": "boh",
+      "body": "#######*******",
+      "id": 32
+    },
+    {
+      "userId": 2,
+      "title": "Cats",
+      "body": "Don't you just hate it when your cat wakes you up like this? Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow.",
+      "id": 33
+    },
+    {
+      "userId": 2,
+      "title": ":o",
+      "body": ":a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a:",
+      "id": 34
     }
   ]
 }
