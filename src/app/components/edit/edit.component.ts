@@ -48,7 +48,16 @@ export class EditComponent implements OnInit {
   }
 
   deletePost(): void {
-    this.postService.deletePost(this.id).subscribe();
-    this.router.navigate(['/']);
+    this.playSound();
+    this.postService.deletePost(this.id).subscribe((response) => {
+      this.router.navigate(['/']);
+    });
+  }
+
+  playSound() {
+    const audio = new Audio();
+    audio.src = '../../../assets/wrap.mp3';
+    audio.load();
+    audio.play();
   }
 }

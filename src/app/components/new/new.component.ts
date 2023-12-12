@@ -28,9 +28,16 @@ export class NewComponent implements OnInit {
   }
 
   addPost() {
+    this.playSound();
     this.post.userId = this.userId;
-
     this.postSrv.createPost(this.post).subscribe();
     this.router.navigate(['/']);
+  }
+
+  playSound() {
+    const audio = new Audio();
+    audio.src = '../../../assets/write.mp3';
+    audio.load();
+    audio.play();
   }
 }
