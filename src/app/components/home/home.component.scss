@@ -33,10 +33,10 @@ input {
   margin-bottom: 30px;
   padding: 8px 15px;
   color: #704837;
-  
 }
 
-input:focus-visible, input::placeholder{
+input:focus-visible,
+input::placeholder {
   outline-color: #512918;
   color: #704837;
   text-align: start;
@@ -62,7 +62,6 @@ button:hover {
   color: #fae8d2;
 }
 
-
 .input-icons {
   margin-bottom: 10px;
   position: relative;
@@ -79,4 +78,12 @@ button:hover {
 
 .input-field {
   text-align: center;
+}
+.card-header {
+  background-color: rgb(252, 250, 245);
+  color: #512918;
+}
+.card-body {
+  background-color: rgb(252, 250, 245);
+  color: #512918;
 }

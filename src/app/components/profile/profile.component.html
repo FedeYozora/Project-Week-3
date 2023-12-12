@@ -6,18 +6,23 @@
 </div>
 
 <div class="container mt-5 mb-4 p-3 d-flex justify-content-center mx-auto">
-  <div class="card p-4">
+  <div class="card p-4 shadow">
     <div
       class="image d-flex flex-column justify-content-center align-items-center"
     >
       <button class="btn btn-secondary imageProfile">
         <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
       </button>
-      <h3 *ngIf="currentUser" class="name mt-3">
+      <div class="px-2 rounded mt-4 date">
+        <span class="join">Joined Dec, 2023</span>
+      </div>
+      <h3 *ngIf="currentUser" class="name mt-3 textColor">
+        {{ currentUser.user.nome }}
         {{ currentUser.user.cognome }}
       </h3>
-
-      <span *ngIf="currentUser" class="idd">{{ currentUser.user.nome }}</span>
+      <div class="text mt-3">
+        <p *ngIf="currentUser">{{ currentUser.user.email }}</p>
+      </div>
       <div
         class="d-flex flex-row justify-content-center align-items-center gap-2"
       >
@@ -31,21 +36,25 @@
         >
       </div>
       <div class="d-flex mt-2">
-        <button class="btn1 btn-dark">Edit Profile</button>
+        <button class="btn1 btn-brown shadow">Edit Profile</button>
       </div>
-      <div class="text mt-3">
-        <h4 *ngIf="currentUser">Email : {{ currentUser.user.email }}</h4>
-      </div>
+
       <div
-        class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"
+        class="bi gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"
       >
-        <span><i class="bi bi-twitter-x"></i></span>
-        <span><i class="bi bi-facebook"></i></span>
-        <span><i class="bi bi-instagram"></i></span>
-        <span><i class="bi bi-linkedin"></i></span>
-      </div>
-      <div class="px-2 rounded mt-4 date">
-        <span class="join">Joined May,2021</span>
+        <a href="https://twitter.com/?lang=it"
+          ><i class="bi bi-twitter-x fs-6"></i
+        ></a>
+        <a href="https://www.facebook.com/?locale=it_IT"
+          ><i class="bi bi-facebook fs-6"></i
+        ></a>
+        <a href="https://www.instagram.com/"
+          ><i class="bi bi-instagram fs-6"></i
+        ></a>
+        <a
+          href="https://it.linkedin.com/?src=go-pa&trk=sem-ga_campid.20677489327_asid.153452322614_crid.677545198980_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1008664&mcid=7120409760495009793&cid=&gclid=EAIaIQobChMIvf3FjfmJgwMVc0ZBAh24GADMEAAYASAAEgJLcfD_BwE&gclsrc=aw.ds"
+          ><i class="bi bi-linkedin fs-6"></i
+        ></a>
       </div>
     </div>
   </div>

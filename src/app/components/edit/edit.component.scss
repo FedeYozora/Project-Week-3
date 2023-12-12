@@ -23,10 +23,13 @@ textarea {
 .myFont {
   color: #512918;
   font-weight: 700;
+  font-size: 40px;
 }
 label {
   color: #512918;
 }
-input:focus {
-  box-shadow: none;
+.form-control {
+  background-color: rgb(252, 250, 245);
+  border: none;
+  color: #512918;
 }
