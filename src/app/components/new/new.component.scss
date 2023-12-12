@@ -23,6 +23,7 @@ input:focus, textarea:focus{
 }
 
 button, button:disabled {
+    border-radius: 15px;
     background-color: #512918;
     color: #FAE8D2;
 }
