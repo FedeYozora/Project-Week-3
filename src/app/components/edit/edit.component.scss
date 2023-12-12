@@ -1,7 +1,32 @@
 .edit-post {
-  margin-top: 86px;
+  margin-top: 150px;
 }
 
 textarea {
   height: 150px !important;
+}
+.btn-brown {
+  background-color: #512918;
+  color: antiquewhite;
+  border-radius: 15px;
+}
+.btn-beige {
+  background-color: #b37f52;
+  color: antiquewhite;
+  border-radius: 15px;
+}
+.btn-or {
+  background-color: #b92909;
+  color: antiquewhite;
+  border-radius: 20px;
+}
+.myFont {
+  color: #512918;
+  font-weight: 700;
+}
+label {
+  color: #512918;
+}
+input:focus {
+  box-shadow: none;
 }

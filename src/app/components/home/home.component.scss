@@ -6,8 +6,8 @@
   height: 49px;
 }
 
-.container {
-  margin-top: 130px;
+.container-fluid {
+  margin-top: 86px;
 }
 
 .brown-btn {
@@ -24,4 +24,32 @@
 }
 .card {
   border: none;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  padding: 8px 15px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+button:hover {
+  background-color: #704938;
+  color: #fae8d2;
 }
