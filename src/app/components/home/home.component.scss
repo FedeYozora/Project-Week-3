@@ -59,3 +59,24 @@ button:hover {
   background-color: #704938;
   color: #fae8d2;
 }
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  bottom: 28px;
+  color: #704938;
+}
+
+.input-field {
+  text-align: center;
+}
