@@ -9,10 +9,17 @@ import { User } from 'src/app/models/user';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
-  constructor(private userSrv: UserService) {}
+  followerNum!: number;
+  constructor(private userSrv: UserService) {
+    this.generateRandom();
+  }
 
   ngOnInit(): void {
     this.currentUser = this.userSrv.getUserFromLocalStorage();
     console.log(this.currentUser);
+  }
+
+  generateRandom() {
+    this.followerNum = Math.floor(Math.random() * 1000) + 1;
   }
 }
