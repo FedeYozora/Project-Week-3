@@ -14,13 +14,22 @@
   background-color: #512918;
   color: #f3ebdc;
 }
+.brown-btn:hover {
+  background-color: #79432b;
+  color: #f3ebdc;
+}
 
 .beige-btn {
   background-color: #b37f52;
   color: #f3ebdc;
 }
+.beige-btn:hover {
+  background-color: #d19f73;
+  color: #f3ebdc;
+}
 .btn {
   border-radius: 15px;
+  margin-top: 35px;
 }
 .card {
   border: none;
@@ -33,7 +42,6 @@ input {
   margin-bottom: 30px;
   padding: 8px 15px;
   color: #704837;
- 
 }
 
 input:focus-visible,
@@ -88,4 +96,7 @@ button:hover {
 .card-body {
   background-color: rgb(252, 250, 245);
   color: #512918;
+}
+.card-body {
+  height: 150px;
 }
