@@ -40,4 +40,8 @@ export class NewComponent implements OnInit {
     audio.load();
     audio.play();
   }
+
+  backToHome() {
+    this.router.navigate(['/']);
+  }
 }
