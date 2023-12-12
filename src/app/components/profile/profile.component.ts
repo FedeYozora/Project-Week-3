@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-profile',
@@ -7,10 +8,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  currentUser: { nome: string; cognome: string; email: string } | null = null;
+  currentUser: any;
   constructor(private userSrv: UserService) {}
 
   ngOnInit(): void {
-    this.currentUser = this.userSrv.getCurrentUser();
+    this.currentUser = this.userSrv.getUserFromLocalStorage();
+    console.log(this.currentUser);
   }
 }
