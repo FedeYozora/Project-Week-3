@@ -6,12 +6,13 @@
 body {
   background-color: #000;
 }
-
+.bi {
+  cursor: pointer;
+}
 .card {
   width: 350px;
   background-color: #efefef;
   border: none;
-  cursor: pointer;
   transition: all 0.5s;
 }
 
@@ -19,8 +20,8 @@ body {
   transition: all 0.5s;
 }
 
-.card:hover .image img {
-  transform: scale(1.5);
+.imageProfile:hover img {
+  transform: scale(1.2);
 }
 
 .btn {

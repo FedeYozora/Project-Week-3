@@ -10,7 +10,7 @@
     <div
       class="image d-flex flex-column justify-content-center align-items-center"
     >
-      <button class="btn btn-secondary">
+      <button class="btn btn-secondary imageProfile">
         <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
       </button>
       <h3 *ngIf="currentUser" class="name mt-3">
@@ -32,20 +32,15 @@
         <button class="btn1 btn-dark">Edit Profile</button>
       </div>
       <div class="text mt-3">
-        <h6>
-          {{ currentUser.user.name }} is a creator of minimalistic x bold
-          graphics and digital artwork.<br /><br />
-          Artist/ Creative Director by Day #NFT minting@ with FND night.
-        </h6>
         <h4 *ngIf="currentUser">Email : {{ currentUser.user.email }}</h4>
       </div>
       <div
         class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"
       >
-        <span><i class="fa fa-twitter"></i></span>
-        <span><i class="fa fa-facebook-f"></i></span>
-        <span><i class="fa fa-instagram"></i></span>
-        <span><i class="fa fa-linkedin"></i></span>
+        <span><i class="bi bi-twitter-x"></i></span>
+        <span><i class="bi bi-facebook"></i></span>
+        <span><i class="bi bi-instagram"></i></span>
+        <span><i class="bi bi-linkedin"></i></span>
       </div>
       <div class="px-2 rounded mt-4 date">
         <span class="join">Joined May,2021</span>
