@@ -25,14 +25,12 @@
             <p class="card-text text-truncate mb-4">{{ post.body }}.</p>
             <div class="d-flex justify-content-center">
               <a
-                [routerLink]="['/edit', post.id]"
-                class="btn brown-btn me-4 shadow"
-                >Edit</a
-              >
-              <a
                 [routerLink]="['/details', post.id]"
-                class="btn beige-btn shadow"
-                >Dettagli</a
+                class="btn brown-btn me-4 shadow"
+                >Details</a
+              >
+              <a [routerLink]="['/edit', post.id]" class="btn beige-btn shadow"
+                >Edit</a
               >
             </div>
           </div>

@@ -21,6 +21,15 @@
       "genre": "male",
       "city": "Udine",
       "id": 3
+    },
+    {
+      "email": "platinette@other.com",
+      "password": "$2a$10$VLLqv0N9OupeXslWqfmzOugR/2V1eV19XHNMtsz9SdeEFUWiMl7T.",
+      "nome": "Mauro",
+      "cognome": "Platinette",
+      "genre": "other",
+      "city": "Langhirano",
+      "id": 4
     }
   ],
   "posts": [
