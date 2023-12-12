@@ -4,6 +4,8 @@
       "email": "dario@dario.com",
       "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
       "username": "Dario Del Giudice",
+      "genre": "male",
+      "city": "Napoli",
       "id": 1
     },
     {
@@ -11,6 +13,8 @@
       "password": "$2a$10$6nwVnEprOuvxnXbrHTYYxujA0/VoyOgL/x2UjCeYcED7GlBItbxqG",
       "nome": "Alessia",
       "cognome": "Palmieri",
+      "genre": "female",
+      "city": "Roma",
       "id": 2
     },
     {
