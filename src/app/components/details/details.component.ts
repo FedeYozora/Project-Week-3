@@ -19,8 +19,24 @@ export class DetailsComponent implements OnInit {
       if (!isNaN(postId)) {
         this.postSrv.getPost(postId).subscribe((post) => {
           this.post = post;
+          this.speakText(post.body);
         });
       }
     });
+  }
+
+  speakText(text: string): void {
+    if ('speechSynthesis' in window) {
+      const textRead = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(textRead);
+    } else {
+      console.error('Text-to-speech non supportato.');
+    }
+  }
+
+  ngOnDestroy(): void {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
   }
 }

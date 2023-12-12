@@ -9,6 +9,7 @@ import { Post } from 'src/app/models/post';
 })
 export class HomeComponent implements OnInit {
   posts!: Post[];
+  searchInput!: string;
 
   constructor(private postService: PostService) {}
 
@@ -24,6 +25,18 @@ export class HomeComponent implements OnInit {
       (error) => {
         console.log('Error getting posts:', error);
       }
+    );
+  }
+
+  searchPosts(searchValue: string): void {
+    this.searchInput = searchValue;
+    if (!this.searchInput) {
+      this.getPosts();
+      return;
+    }
+
+    this.posts = this.posts.filter((post) =>
+      post.title.toLowerCase().includes(this.searchInput.toLowerCase())
     );
   }
 }
