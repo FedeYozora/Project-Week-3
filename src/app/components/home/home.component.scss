@@ -6,8 +6,8 @@
   height: 49px;
 }
 
-.container {
-  margin-top: 130px;
+.container-fluid {
+  margin-top: 86px;
 }
 
 .brown-btn {
@@ -32,4 +32,19 @@ input {
   border-radius: 8px;
   margin-bottom: 30px;
   padding: 8px 15px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

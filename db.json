@@ -159,12 +159,6 @@
     },
     {
       "userId": 2,
-      "title": "fdfdfd",
-      "body": "fdfdf",
-      "id": 29
-    },
-    {
-      "userId": 2,
       "title": "dfdfdd",
       "body": "fddfdf",
       "id": 30
@@ -174,24 +168,6 @@
       "title": "dfdfd",
       "body": "fdfd",
       "id": 31
-    },
-    {
-      "userId": 2,
-      "title": "fdfdfd",
-      "body": "fdfdf",
-      "id": 32
-    },
-    {
-      "userId": 2,
-      "title": "fdfdf",
-      "body": "dfdfd",
-      "id": 33
-    },
-    {
-      "userId": 2,
-      "title": "ds",
-      "body": "dsd",
-      "id": 34
     }
   ]
 }
