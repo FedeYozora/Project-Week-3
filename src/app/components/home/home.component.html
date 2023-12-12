@@ -1,10 +1,13 @@
-<div class="container">
-  <h2>Posts</h2>
-  <input
-    #search
-    placeholder="Search for a post"
-    (keyup)="searchPosts(search.value)"
-  />
+<div class="container d-flex flex-column">
+  <div class="row">
+    <div class="col text-center">
+      <input
+        #search
+        placeholder="Search for a post"
+        (keyup)="searchPosts(search.value)"
+      />
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-4 mb-3 g-4" *ngFor="let post of posts">
       <div class="card shadow">
