@@ -11,7 +11,7 @@ body {
 }
 .card {
   width: 350px;
-  background-color: #efefef;
+  background-color: rgb(252, 250, 245);
   border: none;
   transition: all 0.5s;
 }
@@ -86,4 +86,13 @@ hr .new1 {
 
 .date {
   background-color: #ccc;
+}
+
+button {
+  background-color: #fae8d2;
+  border: none;
+}
+
+button:hover {
+  background-color: #fae8d2;
 }
