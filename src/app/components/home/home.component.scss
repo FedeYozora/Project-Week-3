@@ -32,12 +32,15 @@ input {
   margin-top: 70px;
   margin-bottom: 30px;
   padding: 8px 15px;
-  color: #704837;;
+  color: #704837;
+ 
 }
 
-input:focus-visible, input::placeholder{
+input:focus-visible,
+input::placeholder {
   outline-color: #512918;
   color: #704837;
+  text-align: start;
 }
 
 ::-webkit-scrollbar {
@@ -60,12 +63,7 @@ button:hover {
   color: #fae8d2;
 }
 
-.input-icons i {
-  position: absolute;
-}
-
 .input-icons {
-  width: 100%;
   margin-bottom: 10px;
   position: relative;
 }
@@ -73,10 +71,21 @@ button:hover {
 .icon {
   padding: 10px;
   min-width: 40px;
-  bottom: 28px;
   color: #704938;
+  top: 68px;
+  right: 0;
+  left: 176px;
+  position: absolute;
 }
 
 .input-field {
   text-align: center;
+}
+.card-header {
+  background-color: rgb(252, 250, 245);
+  color: #512918;
+}
+.card-body {
+  background-color: rgb(252, 250, 245);
+  color: #512918;
 }
