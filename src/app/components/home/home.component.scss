@@ -28,11 +28,12 @@
 
 input {
   border: none;
-
   border-radius: 8px;
+  margin-top: 70px;
   margin-bottom: 30px;
   padding: 8px 15px;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -47,4 +48,8 @@ input {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+button:hover {
+  background-color: #704938;
+  color: #fae8d2;
 }
