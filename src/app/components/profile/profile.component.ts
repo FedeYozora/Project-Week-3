@@ -16,7 +16,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = this.userSrv.getUserFromLocalStorage();
-    console.log(this.currentUser);
   }
 
   generateRandom() {

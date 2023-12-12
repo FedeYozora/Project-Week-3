@@ -24,7 +24,6 @@ export class AuthService {
         this.authSubj.next(loggato);
         this.utente = loggato;
         localStorage.setItem('user', JSON.stringify(loggato));
-        console.log(this.user$);
         this.router.navigate(['/']);
       }),
       catchError(this.errors)
@@ -66,7 +65,6 @@ export class AuthService {
   }
 
   private errors(err: any) {
-    console.log(err);
     switch (err.error) {
       case 'Email already exists':
         return throwError('Email già registrata');
