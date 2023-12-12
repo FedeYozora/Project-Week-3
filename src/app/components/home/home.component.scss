@@ -32,12 +32,14 @@ input {
   margin-top: 70px;
   margin-bottom: 30px;
   padding: 8px 15px;
-  color: #704837;;
+  color: #704837;
+  
 }
 
 input:focus-visible, input::placeholder{
   outline-color: #512918;
   color: #704837;
+  text-align: start;
 }
 
 ::-webkit-scrollbar {
@@ -60,12 +62,8 @@ button:hover {
   color: #fae8d2;
 }
 
-.input-icons i {
-  position: absolute;
-}
 
 .input-icons {
-  width: 100%;
   margin-bottom: 10px;
   position: relative;
 }
@@ -74,7 +72,9 @@ button:hover {
   padding: 10px;
   min-width: 40px;
   bottom: 28px;
+  right: 368px;
   color: #704938;
+  position: absolute;
 }
 
 .input-field {
