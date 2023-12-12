@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
+import { Post } from 'src/app/models/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,13 +12,20 @@ import { User } from 'src/app/models/user';
 export class ProfileComponent implements OnInit {
   currentUser: any;
   followerNum!: number;
-  constructor(private userSrv: UserService) {
+  posts!: Post[];
+
+  constructor(private userSrv: UserService, private postSrv: PostService) {
     this.generateRandom();
   }
 
   ngOnInit(): void {
     this.currentUser = this.userSrv.getUserFromLocalStorage();
     console.log(this.currentUser);
+    this.postSrv
+      .getPostsByUserId(this.currentUser.user.id)
+      .subscribe((posts) => {
+        this.posts = posts;
+      });
   }
 
   generateRandom() {

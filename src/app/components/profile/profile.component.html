@@ -1,80 +1,106 @@
-<h1>Profile</h1>
-<div *ngIf="currentUser">
-  <h6>Name :{{ currentUser.nome }}</h6>
-
-  <h6>Email :{{ currentUser.email }}</h6>
-</div>
-
-<div class="container mt-5 mb-4 p-3 d-flex justify-content-center mx-auto">
-  <div class="card p-4 shadow">
-    <div
-      class="image d-flex flex-column justify-content-center align-items-center"
-    >
-      <button class="btn btn-secondary imageProfile">
-        <img
-          *ngIf="currentUser && currentUser.user.genre === 'male'"
-          src="https://openclipart.org/image/800px/313668"
-          height="100"
-          width="85"
-        />
-        <img
-          *ngIf="currentUser && currentUser.user.genre === 'female'"
-          src="https://i.imgur.com/wvxPV9S.png"
-          height="100"
-          width="100"
-        />
-        <img
-          *ngIf="currentUser && currentUser.user.genre === 'other'"
-          src="../../../assets/other.png"
-          height="100"
-          width="100"
-        />
-      </button>
-      <div class="px-2 rounded mt-4 date">
-        <span class="join">Joined Dec, 2023</span>
-      </div>
-      <h3 *ngIf="currentUser" class="name mt-3 textColor">
-        {{ currentUser.user.nome }}
-        {{ currentUser.user.cognome }}
-      </h3>
-      <div class="text mt-3">
-        <p *ngIf="currentUser">{{ currentUser.user.city }}</p>
-      </div>
-      <div class="text mt-3">
-        <p *ngIf="currentUser">{{ currentUser.user.email }}</p>
-      </div>
-      <div
-        class="d-flex flex-row justify-content-center align-items-center gap-2"
-      >
-        <span><i class="fa fa-copy"></i></span>
-      </div>
-      <div
-        class="d-flex flex-row justify-content-center align-items-center mt-3"
-      >
-        <span class="number"
-          >{{ followerNum }} <span class="follow">Followers</span></span
+<div
+  class="container-fluid p-3 d-flex flex-column"
+  style="height: calc(100vh - 1px); overflow-y: auto"
+>
+  <div class="row scrollable">
+    <div class="col-4 d-flex justify-content-center align-items-center">
+      <div class="card p-4 shadow cardAvatar">
+        <div
+          class="image d-flex flex-column justify-content-center align-items-center"
         >
-      </div>
-      <div class="d-flex mt-2">
-        <button class="btn1 btn-brown shadow">Edit Profile</button>
-      </div>
+          <button class="btn btn-secondary imageProfile">
+            <img
+              *ngIf="currentUser && currentUser.user.genre === 'male'"
+              src="https://openclipart.org/image/800px/313668"
+              height="100"
+              width="85"
+            />
+            <img
+              *ngIf="currentUser && currentUser.user.genre === 'female'"
+              src="https://i.imgur.com/wvxPV9S.png"
+              height="100"
+              width="100"
+            />
+            <img
+              *ngIf="currentUser && currentUser.user.genre === 'other'"
+              src="../../../assets/other.png"
+              height="100"
+              width="100"
+            />
+          </button>
+          <div class="px-2 rounded mt-4 date">
+            <span class="join">Joined Dec, 2023</span>
+          </div>
+          <h3 *ngIf="currentUser" class="name mt-3 textColor">
+            {{ currentUser.user.nome }}
+            {{ currentUser.user.cognome }}
+          </h3>
+          <div class="text mt-3">
+            <p *ngIf="currentUser">{{ currentUser.user.city }}</p>
+          </div>
+          <div class="text mt-3">
+            <p *ngIf="currentUser">{{ currentUser.user.email }}</p>
+          </div>
+          <div
+            class="d-flex flex-row justify-content-center align-items-center gap-2"
+          >
+            <span><i class="fa fa-copy"></i></span>
+          </div>
+          <div
+            class="d-flex flex-row justify-content-center align-items-center mt-3"
+          >
+            <span class="number"
+              >{{ followerNum }} <span class="follow">Followers</span></span
+            >
+          </div>
+          <div class="d-flex mt-2">
+            <button class="btn1 btn-brown shadow">Edit Profile</button>
+          </div>
 
-      <div
-        class="bi gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"
-      >
-        <a href="https://twitter.com/?lang=it"
-          ><i class="bi bi-twitter-x fs-6"></i
-        ></a>
-        <a href="https://www.facebook.com/?locale=it_IT"
-          ><i class="bi bi-facebook fs-6"></i
-        ></a>
-        <a href="https://www.instagram.com/"
-          ><i class="bi bi-instagram fs-6"></i
-        ></a>
-        <a
-          href="https://it.linkedin.com/?src=go-pa&trk=sem-ga_campid.20677489327_asid.153452322614_crid.677545198980_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1008664&mcid=7120409760495009793&cid=&gclid=EAIaIQobChMIvf3FjfmJgwMVc0ZBAh24GADMEAAYASAAEgJLcfD_BwE&gclsrc=aw.ds"
-          ><i class="bi bi-linkedin fs-6"></i
-        ></a>
+          <div
+            class="bi gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"
+          >
+            <a href="https://twitter.com/?lang=it"
+              ><i class="bi bi-twitter-x fs-6"></i
+            ></a>
+            <a href="https://www.facebook.com/?locale=it_IT"
+              ><i class="bi bi-facebook fs-6"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="bi bi-instagram fs-6"></i
+            ></a>
+            <a
+              href="https://it.linkedin.com/?src=go-pa&trk=sem-ga_campid.20677489327_asid.153452322614_crid.677545198980_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1008664&mcid=7120409760495009793&cid=&gclid=EAIaIQobChMIvf3FjfmJgwMVc0ZBAh24GADMEAAYASAAEgJLcfD_BwE&gclsrc=aw.ds"
+              ><i class="bi bi-linkedin fs-6"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-md-4 mb-3 g-4" *ngFor="let post of posts">
+          <div class="card shadow">
+            <div class="card-header headHeight">
+              <h5 class="text-truncate">{{ post.title }}</h5>
+            </div>
+            <div class="card-body d-flex-colomn height pb-0">
+              <p class="card-text text-truncate mb-4">{{ post.body }}.</p>
+              <div class="d-flex justify-content-center">
+                <a
+                  [routerLink]="['/details', post.id]"
+                  class="btn brown-btn me-4 shadow"
+                  >Details</a
+                >
+                <a
+                  [routerLink]="['/edit', post.id]"
+                  class="btn beige-btn shadow"
+                  >Edit</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
