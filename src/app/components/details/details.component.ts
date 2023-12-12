@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
       if (!isNaN(postId)) {
         this.postSrv.getPost(postId).subscribe((post) => {
           this.post = post;
-          this.speakText(post.body);
         });
       }
     });
