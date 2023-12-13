@@ -1,0 +1,57 @@
+<div class="container">
+  <form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        [(ngModel)]="user.nome"
+        class="form-control"
+        id="nome"
+        name="nome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cognome">Cognome</label>
+      <input
+        type="text"
+        [(ngModel)]="user.cognome"
+        class="form-control"
+        id="cognome"
+        name="cognome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        type="text"
+        [(ngModel)]="user.city"
+        class="form-control"
+        id="city"
+        name="city"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        [(ngModel)]="user.email"
+        class="form-control"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">New Password</label>
+      <input
+        type="password"
+        ngModel
+        name="password"
+        id="password"
+        class="form-control"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+</div>

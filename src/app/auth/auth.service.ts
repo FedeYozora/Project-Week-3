@@ -58,6 +58,15 @@ export class AuthService {
     );
   }
 
+  updateUserInfo(updatedInfo: any, id: number) {
+    return this.http.put(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
+      tap(() => {
+        this.utente = { ...this.utente, ...updatedInfo };
+      }),
+      catchError(this.errors)
+    );
+  }
+
   logout() {
     this.authSubj.next(null);
     localStorage.removeItem('user');
