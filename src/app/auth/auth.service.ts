@@ -24,7 +24,6 @@ export class AuthService {
         this.authSubj.next(loggato);
         this.utente = loggato;
         localStorage.setItem('user', JSON.stringify(loggato));
-        console.log(this.user$);
         this.router.navigate(['/']);
       }),
       catchError(this.errors)

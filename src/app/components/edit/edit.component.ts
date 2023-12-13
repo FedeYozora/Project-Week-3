@@ -27,7 +27,6 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.params['id']);
-    console.log(this.id);
 
     this.postService.getPost(this.id).subscribe((data) => {
       this.post = data;

@@ -37,7 +37,6 @@ export class EditProfileComponent implements OnInit {
   private loadUserData() {
     this.userSrv.getUser(this.id).subscribe((utente) => {
       this.user = utente;
-      console.log(this.user);
     });
   }
 
@@ -45,5 +44,8 @@ export class EditProfileComponent implements OnInit {
     this.authService.updateUserInfo(this.user, this.id).subscribe(() => {
       this.router.navigate(['']);
     });
+  }
+  cancel(): void {
+    this.router.navigate(['profile']);
   }
 }

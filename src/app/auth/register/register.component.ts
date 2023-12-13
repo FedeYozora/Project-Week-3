@@ -14,8 +14,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   registra(form: NgForm) {
-    console.log(form.value);
-
     try {
       this.authSrv.register(form.value).subscribe();
 
