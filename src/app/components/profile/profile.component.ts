@@ -20,7 +20,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = this.userSrv.getUserFromLocalStorage();
-    console.log(this.currentUser);
     this.postSrv
       .getPostsByUserId(this.currentUser.user.id)
       .subscribe((posts) => {
