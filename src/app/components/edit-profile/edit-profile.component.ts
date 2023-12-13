@@ -20,6 +20,7 @@ export class EditProfileComponent implements OnInit {
     genre: '',
     email: '',
     password: '',
+    role: '',
   };
   id!: number;
   constructor(
