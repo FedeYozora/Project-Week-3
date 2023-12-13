@@ -102,6 +102,7 @@ button:hover {
 .btn-brown {
   background-color: #512918;
   color: #f3ebdc;
+  border-radius: 6px;
 }
 .btn-brown:hover {
   background-color: #79432b;
@@ -129,12 +130,22 @@ p {
   color: #c9a87d;
 }
 
+.card:hover {
+  box-shadow: 0px 1px 20px -8px #000000 !important ;
+  transition: all 300ms;
+  transform: scale(102%);
+}
+
 .height {
   height: 120px;
 }
 
 .headHeight {
   height: 49px;
+}
+
+h5 {
+  color: #512918;
 }
 
 .brown-btn {
