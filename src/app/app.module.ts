@@ -16,6 +16,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ProfileComponent } from './components/profile/profile.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '' },
 ];
 
@@ -49,6 +51,7 @@ const routes: Routes = [
     RegisterComponent,
     ProfileComponent,
     EditProfileComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
