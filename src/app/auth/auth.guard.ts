@@ -35,8 +35,6 @@ export class AuthGuard implements CanActivate {
       map((utente) => {
         if (utente) {
           this.userService.setCurrentUser(utente);
-          console.log(utente.user.role);
-
           if (utente.user.role === 'admin') {
             return true;
           } else if (

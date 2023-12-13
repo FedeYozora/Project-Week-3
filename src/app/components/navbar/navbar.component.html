@@ -62,7 +62,7 @@
             >Login</a
           >
         </li>
-        <li *ngIf="!utente" class="nav-item">
+        <li *ngIf="!utente || utente.user.role === 'admin'" class="nav-item">
           <a
             class="nav-link mx-2"
             [routerLink]="['register']"
