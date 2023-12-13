@@ -5,6 +5,6 @@ export interface AuthData {
     email: string;
     password: string;
     username: string;
-    role: 'admin' | 'user';
+    role: string;
   };
 }

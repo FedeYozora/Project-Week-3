@@ -6,5 +6,5 @@ export interface User {
   genre: string;
   email: string;
   password: string;
-  role: 'admin' | 'user';
+  role: string;
 }
