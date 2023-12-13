@@ -9,6 +9,7 @@ import {
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 import { UserService } from '../services/user.service';
+import { User } from '../models/user';
 import { map, take } from 'rxjs';
 
 @Injectable({
@@ -34,7 +35,18 @@ export class AuthGuard implements CanActivate {
       map((utente) => {
         if (utente) {
           this.userService.setCurrentUser(utente);
-          return true;
+          console.log(utente.user.role);
+
+          if (utente.user.role === 'admin') {
+            return true;
+          } else if (
+            utente.user.role === 'user' &&
+            state.url.includes('admin')
+          ) {
+            return this.router.createUrlTree(['/home']);
+          } else {
+            return true;
+          }
         }
         return this.router.createUrlTree(['/login']);
       })

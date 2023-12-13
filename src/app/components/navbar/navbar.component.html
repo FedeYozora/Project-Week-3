@@ -15,6 +15,17 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div *ngIf="utente" class="nav-item">
+      <div *ngIf="utente.user.role === 'admin'">
+        <a
+          class="nav-link mx-2"
+          [routerLink]="['admin']"
+          routerLinkActive="active"
+          ><i class="bi bi-award-fill"></i>Admin</a
+        >
+      </div>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li *ngIf="utente" class="nav-item">
