@@ -46,3 +46,8 @@ label {
 .form-group {
   font-weight: 600;
 }
+input:focus,
+textarea:focus {
+  border-color: #512918;
+  box-shadow: none;
+}
