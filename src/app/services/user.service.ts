@@ -3,6 +3,7 @@ import { User } from '../models/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Post } from '../models/post';
 
 @Injectable({
   providedIn: 'root',
@@ -28,5 +29,16 @@ export class UserService {
 
   getUser(id: number): Observable<User> {
     return this.http.get<User>(`${this.apiURL}/users/${id}`);
+  }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiURL}/users`);
+  }
+
+  delUser(id: number): Observable<User> {
+    return this.http.delete<User>(`${this.apiURL}/users/${id}`);
+  }
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.apiURL}/posts`);
   }
 }
