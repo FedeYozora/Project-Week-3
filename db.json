@@ -177,5 +177,43 @@
       "body": ":a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a:",
       "id": 34
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 10,
+      "userId": 2
+    },
+    {
+      "postId": 10,
+      "body": "Ciao",
+      "id": 2,
+      "userId": 0
+    },
+    {
+      "postId": "10",
+      "body": "e",
+      "id": 4,
+      "userId": 0
+    },
+    {
+      "postId": "10",
+      "body": "commento",
+      "id": 5,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "1",
+      "id": 6,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "2",
+      "id": 7,
+      "userId": 0
+    }
   ]
 }
