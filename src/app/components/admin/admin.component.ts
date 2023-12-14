@@ -13,7 +13,6 @@ export class AdminComponent implements OnInit {
   users: any[] = [];
   posts: any[] = [];
   comments: any[] = [];
-  selectedUserId!: number;
 
   postsCount = 0;
   commsCount = 0;
@@ -41,10 +40,6 @@ export class AdminComponent implements OnInit {
     this.users = this.users.filter((user) => user.role === role);
   }
 
-  selectUser(userId: number) {
-    this.selectedUserId = userId;
-  }
-
   deleteUser(userId: number): void {
     this.userSrv.delUser(userId).subscribe(() => {
       this.commSrv.banComments(userId).subscribe((comments) => {
@@ -60,6 +55,10 @@ export class AdminComponent implements OnInit {
         } else {
           this.loadUser();
         }
+
+        let bannedUser = this.users.find((user) => user.id === userId);
+        let bannedUserMail = bannedUser.email;
+        this.userSrv.addBannedUser(bannedUserMail);
       });
     });
   }

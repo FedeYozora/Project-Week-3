@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Post } from '../models/post';
+import { BannedMail } from '../models/banned-mail';
 
 @Injectable({
   providedIn: 'root',
@@ -40,5 +41,8 @@ export class UserService {
   }
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(`${this.apiURL}/posts`);
+  }
+  addBannedUser(email: string): Observable<BannedMail> {
+    return this.http.post<BannedMail>(`${this.apiURL}/banned_users`, email);
   }
 }
