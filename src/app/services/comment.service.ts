@@ -17,6 +17,10 @@ export class CommentService {
     );
   }
 
+  getAllComments() {
+    return this.http.get<PostComment[]>(`${this.apiUrl}/comments`);
+  }
+
   deleteComment(commentId: number) {
     return this.http.delete(`${this.apiUrl}/comments/${commentId}`);
   }

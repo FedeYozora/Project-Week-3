@@ -22,8 +22,14 @@ export class AdminComponent implements OnInit {
   loadUser() {
     this.userSrv.getUsers().subscribe((users) => {
       this.users = users;
+      this.filterUsersByRole('user');
+      this.updatePostsCount();
       console.log(this.users);
     });
+  }
+
+  filterUsersByRole(role: string): void {
+    this.users = this.users.filter((user) => user.role === role);
   }
 
   selectUser(userId: number) {
@@ -40,6 +46,13 @@ export class AdminComponent implements OnInit {
     this.userSrv.getPosts().subscribe((post) => {
       this.posts = post;
       console.log(post);
+    });
+  }
+
+  updatePostsCount() {
+    this.users.forEach((user) => {
+      const userPosts = this.posts.filter((post) => post.userId === user.id);
+      user.postsCount = userPosts.length;
     });
   }
 }
