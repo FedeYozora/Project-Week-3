@@ -43,6 +43,6 @@ export class UserService {
     return this.http.get<Post[]>(`${this.apiURL}/posts`);
   }
   addBannedUser(email: string): Observable<BannedMail> {
-    return this.http.post<BannedMail>(`${this.apiURL}/banned_users`, email);
+    return this.http.post<BannedMail>(`${this.apiURL}/bannedUsers`, email);
   }
 }
