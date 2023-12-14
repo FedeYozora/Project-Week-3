@@ -12,7 +12,7 @@ import { BannedMail } from 'src/app/models/banned-mail';
 })
 export class RegisterComponent implements OnInit {
   admin!: User | null;
-  bannedUser: BannedMail[] = [];
+  bannedUser: any = [];
   constructor(private authSrv: AuthService, private router: Router) {}
 
   ngOnInit(): void {
@@ -41,8 +41,14 @@ export class RegisterComponent implements OnInit {
   checkUser() {
     this.authSrv.checkEmail().subscribe((data) => {
       if (data) {
-        this.bannedUser = data;
+        let usersBanned = data;
+        this.bannedUser = usersBanned.map((userBanned) => {
+          userBanned.email;
+          console.log(this.bannedUser);
+        });
       }
     });
   }
+
+  takeEmail() {}
 }
