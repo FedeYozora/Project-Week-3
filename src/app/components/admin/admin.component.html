@@ -9,7 +9,9 @@
         <p>{{ user.city }}</p>
         <p>Posts: {{ user.postsCount }}</p>
         <p>Comments: {{ user.commsCount }}</p>
-        <a (click)="deleteUser(user.id)" class="btn btn-danger">Ban User</a>
+        <a (click)="deleteUser(user.id)" class="btn btn-danger"
+          ><i class="bi bi-hammer"></i> Ban User</a
+        >
       </div>
     </div>
   </div>
