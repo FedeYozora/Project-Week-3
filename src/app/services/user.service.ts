@@ -22,7 +22,7 @@ export class UserService {
     return this.currentUser;
   }
 
-  getUserFromLocalStorage(): User | null {
+  getUserFromLocalStorage(): any | null {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) : null;
   }

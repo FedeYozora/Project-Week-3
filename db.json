@@ -7,6 +7,7 @@
       "cognome": "Del Giudice",
       "genre": "male",
       "city": "Napoli",
+      "role": "user",
       "id": 1
     },
     {
@@ -36,6 +37,7 @@
       "cognome": "Platinette",
       "genre": "other",
       "city": "Langhirano",
+      "role": "user",
       "id": 4
     }
   ],
@@ -190,19 +192,19 @@
       "postId": 10,
       "body": "Ciao",
       "id": 2,
-      "userId": 0
+      "userId": 3
     },
     {
       "postId": "10",
       "body": "e",
       "id": 4,
-      "userId": 0
+      "userId": 4
     },
     {
       "postId": "10",
       "body": "commento",
       "id": 5,
-      "userId": 0
+      "userId": 5
     },
     {
       "postId": 9,
@@ -215,6 +217,58 @@
       "body": "2",
       "id": 7,
       "userId": 0
+    },
+    {
+      "postId": 10,
+      "body": "ciao",
+      "id": 8
+    },
+    {
+      "postId": 10,
+      "body": "ciao",
+      "id": 9
+    },
+    {
+      "postId": 10,
+      "body": "adaa",
+      "id": 10,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "ada",
+      "id": 11,
+      "userId": 0
+    },
+    {
+      "postId": 10,
+      "body": "ada",
+      "id": 12,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "dada",
+      "id": 13,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "adada",
+      "id": 14,
+      "userId": 0
+    },
+    {
+      "postId": 9,
+      "body": "adada",
+      "id": 15,
+      "userId": 2
+    },
+    {
+      "postId": 9,
+      "body": "ciao",
+      "id": 16,
+      "userId": 2
     }
   ]
 }
