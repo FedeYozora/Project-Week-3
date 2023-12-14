@@ -92,14 +92,12 @@ button:hover {
 .input-field {
   text-align: center;
 }
-.card-header {
-  background-color: rgb(252, 250, 245);
-  color: #512918;
-}
+.card-header,
 .card-body {
   background-color: rgb(252, 250, 245);
   color: #512918;
 }
+
 .card-body {
   height: 150px;
 }

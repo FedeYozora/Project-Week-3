@@ -3,7 +3,8 @@
     {
       "email": "dario@dario.com",
       "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
-      "username": "Dario Del Giudice",
+      "nome": "Dario",
+      "cognome": "Del Giudice",
       "genre": "male",
       "city": "Napoli",
       "id": 1
