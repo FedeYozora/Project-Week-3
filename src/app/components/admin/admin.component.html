@@ -10,9 +10,11 @@
             {{ user.email }}
           </p>
           <p>{{ user.city }}</p>
+          <p>Posts: {{ user.postsCount }}</p>
+          <p>Comments: {{ user.commsCount }}</p>
           <div class="d-flex justify-content-end">
             <a (click)="deleteUser(user.id)" class="btn me-3 shadow"
-              >Ban User</a
+              ><i class="bi bi-hammer"></i> Ban User</a
             >
           </div>
         </div>
