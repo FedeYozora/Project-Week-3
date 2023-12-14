@@ -16,13 +16,12 @@ export class RegisterComponent implements OnInit {
   constructor(private authSrv: AuthService, private router: Router) {}
 
   ngOnInit(): void {
+    this.checkUser();
     let utente = localStorage.getItem('user');
     if (utente) {
       let isUser = JSON.parse(utente);
       this.admin = isUser;
     }
-
-    this.checkUser();
   }
 
   registra(form: NgForm) {
@@ -40,15 +39,11 @@ export class RegisterComponent implements OnInit {
 
   checkUser() {
     this.authSrv.checkEmail().subscribe((data) => {
-      if (data) {
-        let usersBanned = data;
-        this.bannedUser = usersBanned.map((userBanned) => {
-          userBanned.email;
-          console.log(this.bannedUser);
-        });
-      }
+      let usersBanned = data;
+      console.log(data);
+      this.bannedUser = usersBanned.map((userBanned) => {
+        return userBanned.email;
+      });
     });
   }
-
-  takeEmail() {}
 }
