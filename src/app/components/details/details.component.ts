@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
     body: '',
     id: 0,
     userId: 0,
-    // userId: this.userSrv.getUserFromLocalStorage(),
   };
   constructor(
     private postSrv: PostService,
@@ -41,6 +40,11 @@ export class DetailsComponent implements OnInit {
   }
 
   createComment(comment: PostComment) {
+    let utente = this.userSrv.getUserFromLocalStorage();
+    if (utente) {
+      let userId = utente.user.id;
+      this.commentForm.userId = userId;
+    }
     this.commentSrv.createComment(comment).subscribe(() => {
       this.getComments(this.commentForm.postId);
     });
@@ -49,7 +53,6 @@ export class DetailsComponent implements OnInit {
   getComments(postId: number): void {
     this.commentSrv.getCommentsForPost(postId).subscribe((comments) => {
       this.comments = comments;
-      console.log(comments);
     });
   }
 
