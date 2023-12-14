@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 import { CommentService } from 'src/app/services/comment.service';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-admin',
@@ -17,7 +18,11 @@ export class AdminComponent implements OnInit {
   postsCount = 0;
   commsCount = 0;
 
-  constructor(private userSrv: UserService, private commSrv: CommentService) {}
+  constructor(
+    private userSrv: UserService,
+    private commSrv: CommentService,
+    private postSrv: PostService
+  ) {}
 
   ngOnInit(): void {
     this.loadUser();
@@ -42,7 +47,20 @@ export class AdminComponent implements OnInit {
 
   deleteUser(userId: number): void {
     this.userSrv.delUser(userId).subscribe(() => {
-      this.loadUser();
+      this.commSrv.banComments(userId).subscribe((comments) => {
+        if (!comments) {
+          return;
+        }
+      });
+
+      this.postSrv.banPosts(userId).subscribe((posts) => {
+        if (!posts) {
+          this.loadUser();
+          return;
+        } else {
+          this.loadUser();
+        }
+      });
     });
   }
 
@@ -50,6 +68,7 @@ export class AdminComponent implements OnInit {
     this.userSrv.getPosts().subscribe((post) => {
       this.posts = post;
       this.updatePostsCount();
+      console.log(post);
     });
   }
 
@@ -57,6 +76,7 @@ export class AdminComponent implements OnInit {
     this.commSrv.getAllComments().subscribe((comments) => {
       this.comments = comments;
       this.updateCommsCount();
+      console.log(comments);
     });
   }
 

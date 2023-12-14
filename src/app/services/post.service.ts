@@ -34,4 +34,8 @@ export class PostService {
   deletePost(id: number): Observable<Post> {
     return this.http.delete<Post>(`${this.apiURL}/posts/${id}`);
   }
+
+  banPosts(userId: number): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.apiURL}/posts?userId=${userId}`);
+  }
 }

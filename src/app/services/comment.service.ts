@@ -25,6 +25,10 @@ export class CommentService {
     return this.http.delete(`${this.apiUrl}/comments/${commentId}`);
   }
 
+  banComments(userId: number) {
+    return this.http.delete(`${this.apiUrl}/comments?userId=${userId}`);
+  }
+
   createComment(comment: PostComment) {
     return this.http.post(`${this.apiUrl}/comments`, comment);
   }
