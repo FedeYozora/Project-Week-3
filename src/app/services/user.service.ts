@@ -42,6 +42,7 @@ export class UserService {
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(`${this.apiURL}/posts`);
   }
+
   addBannedUser(data: { email: string }): Observable<BannedMail> {
     return this.http.post<BannedMail>(`${this.apiURL}/bannedUsers`, data);
   }

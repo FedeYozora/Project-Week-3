@@ -40,7 +40,18 @@ export class AdminComponent implements OnInit {
     this.users = this.users.filter((user) => user.role === role);
   }
 
+  banUser(userId: number) {
+    let bannedUser = this.users.find((user) => user.id === userId);
+    console.log(bannedUser);
+
+    let bannedUserMail = bannedUser.email;
+    console.log(bannedUserMail);
+
+    this.userSrv.addBannedUser({ email: bannedUserMail }).subscribe();
+  }
+
   deleteUser(userId: number): void {
+    this.banUser(userId);
     this.userSrv.delUser(userId).subscribe(() => {
       this.commSrv.banComments(userId).subscribe((comments) => {
         if (!comments) {
@@ -50,24 +61,10 @@ export class AdminComponent implements OnInit {
 
       this.postSrv.banPosts(userId).subscribe((posts) => {
         if (!posts) {
-          let bannedUser = this.users.find((user) => user.id === userId);
-          console.log(bannedUser);
-
-          let bannedUserMail = bannedUser.email;
-          console.log(bannedUserMail);
           this.loadUser();
-
-          this.userSrv.addBannedUser(bannedUserMail);
           return;
         } else {
-          let bannedUser = this.users.find((user) => user.id === userId);
-          console.log(bannedUser);
-
-          let bannedUserMail = bannedUser.email;
-          console.log(bannedUserMail);
           this.loadUser();
-
-          this.userSrv.addBannedUser(bannedUserMail);
         }
       });
     });
