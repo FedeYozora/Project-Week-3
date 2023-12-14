@@ -50,15 +50,25 @@ export class AdminComponent implements OnInit {
 
       this.postSrv.banPosts(userId).subscribe((posts) => {
         if (!posts) {
+          let bannedUser = this.users.find((user) => user.id === userId);
+          console.log(bannedUser);
+
+          let bannedUserMail = bannedUser.email;
+          console.log(bannedUserMail);
           this.loadUser();
+
+          this.userSrv.addBannedUser(bannedUserMail);
           return;
         } else {
-          this.loadUser();
-        }
+          let bannedUser = this.users.find((user) => user.id === userId);
+          console.log(bannedUser);
 
-        let bannedUser = this.users.find((user) => user.id === userId);
-        let bannedUserMail = bannedUser.email;
-        this.userSrv.addBannedUser(bannedUserMail);
+          let bannedUserMail = bannedUser.email;
+          console.log(bannedUserMail);
+          this.loadUser();
+
+          this.userSrv.addBannedUser(bannedUserMail);
+        }
       });
     });
   }
