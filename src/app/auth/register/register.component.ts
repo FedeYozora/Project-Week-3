@@ -30,14 +30,28 @@ export class RegisterComponent implements OnInit {
       alert('Stop, questa mail é bandita');
       return;
     }
-    try {
-      this.authSrv.register(form.value).subscribe();
-      this.router.navigate(['/login']);
-    } catch (error: any) {
-      console.log(error);
-      if (error.status === 400) {
-        alert('Email già registrata!');
-        this.router.navigate(['/register']);
+    if (!this.admin) {
+      form.value.role = 'user';
+      try {
+        this.authSrv.register(form.value).subscribe();
+        this.router.navigate(['/login']);
+      } catch (error: any) {
+        console.log(error);
+        if (error.status === 400) {
+          alert('Email già registrata!');
+          this.router.navigate(['/register']);
+        }
+      }
+    } else {
+      try {
+        this.authSrv.register(form.value).subscribe();
+        this.router.navigate(['/login']);
+      } catch (error: any) {
+        console.log(error);
+        if (error.status === 400) {
+          alert('Email già registrata!');
+          this.router.navigate(['/register']);
+        }
       }
     }
   }

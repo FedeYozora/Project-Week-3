@@ -39,6 +39,16 @@
       "city": "Langhirano",
       "role": "user",
       "id": 4
+    },
+    {
+      "email": "dada@dada.da",
+      "password": "$2a$10$OPmUVg/U0jq.IeH8uGOJ/u8MAqD9FuJEvs7Ua9uSjlUi7BiYcbU22",
+      "nome": "dad",
+      "cognome": "dada",
+      "genre": "male",
+      "city": "Castel Viscardo",
+      "role": "user",
+      "id": 5
     }
   ],
   "posts": [
