@@ -49,8 +49,6 @@ export class AuthService {
   register(data: {
     nome: string;
     cognome: string;
-    genre: string;
-    city: string;
     email: string;
     password: string;
     genre: string;
