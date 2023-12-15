@@ -17,7 +17,9 @@ export class RegisterComponent implements OnInit {
     let utente = localStorage.getItem('user');
     if (utente) {
       let isUser = JSON.parse(utente);
-      this.admin = isUser;
+      if (isUser.user.role === 'admin') {
+        this.admin = isUser;
+      }
     }
   }
 
