@@ -54,7 +54,8 @@ export class HomeComponent implements OnInit {
   startTimer(): void {
     this.idleTimer = setTimeout(() => {
       this.counter++;
-      if (this.counter >= 20) {
+      console.log(this.counter);
+      if (this.counter >= 30) {
         const audio = new Audio('../../../assets/Boring Elevator Music.mp3');
         audio.play();
         this.counter = 0;

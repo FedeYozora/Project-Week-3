@@ -28,6 +28,6 @@ export class ProfileComponent implements OnInit {
   }
 
   generateRandom() {
-    this.followerNum = Math.floor(Math.random() * 1000) + 1;
+    this.followerNum = Math.floor(Math.random() * 101) + 900;
   }
 }
