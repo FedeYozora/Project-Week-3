@@ -7,7 +7,7 @@
       "cognome": "Del Giudice",
       "genre": "male",
       "city": "Napoli",
-      "role": "user",
+      "role": "admin",
       "id": 1
     },
     {
@@ -17,7 +17,7 @@
       "cognome": "Palmieri",
       "genre": "female",
       "city": "Roma",
-      "role": "admin",
+      "role": "user",
       "id": 2
     },
     {
