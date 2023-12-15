@@ -3,10 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { AuthData } from './auth-data';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
-import { BehaviorSubject, throwError, tap, catchError } from 'rxjs';
+import { BehaviorSubject, throwError, tap, catchError, Observable } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BannedMail } from '../models/banned-mail';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -52,6 +51,9 @@ export class AuthService {
     cognome: string;
     email: string;
     password: string;
+    genre: string;
+    role: string;
+    city: string;
   }) {
     return this.http.post(`${this.apiURL}/register`, data).pipe(
       tap(() => {

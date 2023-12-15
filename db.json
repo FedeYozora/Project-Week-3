@@ -1,6 +1,16 @@
 {
   "users": [
     {
+      "email": "dario@dario.com",
+      "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
+      "nome": "Dario",
+      "cognome": "Del Giudice",
+      "genre": "male",
+      "city": "Napoli",
+      "role": "user",
+      "id": 1
+    },
+    {
       "email": "ale@ale.com",
       "password": "$2a$10$6nwVnEprOuvxnXbrHTYYxujA0/VoyOgL/x2UjCeYcED7GlBItbxqG",
       "nome": "Alessia",
@@ -29,18 +39,21 @@
       "city": "Langhirano",
       "role": "user",
       "id": 4
-    },
-    {
-      "email": "dario@dario.com",
-      "password": "$2a$10$sRtVQqc8IS2C3vVv3jVzjusxC8GyqCUBXAA4N6QbpM8zlg9tnRjgu",
-      "nome": "efffeefefe",
-      "cognome": "dfdfddd",
-      "genre": "male",
-      "city": "dfdfd",
-      "id": 5
     }
   ],
   "posts": [
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "nesciunt iure omnis dolorem tempora et accusantium",
+      "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "title": "optio molestias id quia eum",
+      "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+    },
     {
       "userId": 2,
       "id": 12,
@@ -182,20 +195,70 @@
       "userId": 3
     },
     {
-      "postId": "10",
+      "postId": 10,
       "body": "e",
       "id": 4,
       "userId": 4
     },
     {
-      "postId": 10,
-      "body": "ciao",
-      "id": 8
+      "postId": 11,
+      "body": "commento",
+      "id": 5,
+      "userId": 5
+    },
+    {
+      "postId": 9,
+      "body": "1",
+      "id": 6,
+      "userId": 4
+    },
+    {
+      "postId": 9,
+      "body": "2",
+      "id": 7,
+      "userId": 4
     },
     {
       "postId": 10,
       "body": "ciao",
-      "id": 9
+      "id": 8,
+      "userId": 4
+    },
+    {
+      "postId": 10,
+      "body": "ciao",
+      "id": 9,
+      "userId": 4
+    },
+    {
+      "postId": 10,
+      "body": "adaa",
+      "id": 10,
+      "userId": 4
+    },
+    {
+      "postId": 9,
+      "body": "ada",
+      "id": 11,
+      "userId": 4
+    },
+    {
+      "postId": 10,
+      "body": "ada",
+      "id": 12,
+      "userId": 4
+    },
+    {
+      "postId": 9,
+      "body": "dada",
+      "id": 13,
+      "userId": 4
+    },
+    {
+      "postId": 9,
+      "body": "adada",
+      "id": 14,
+      "userId": 4
     },
     {
       "postId": 9,
@@ -208,12 +271,13 @@
       "body": "ciao",
       "id": 16,
       "userId": 2
+    },
+    {
+      "postId": 16,
+      "body": "Cool!",
+      "id": 17,
+      "userId": 1
     }
   ],
-  "bannedUsers": [
-    {
-      "email": "dario@dario.com",
-      "id": 1
-    }
-  ]
+  "bannedUsers": []
 }

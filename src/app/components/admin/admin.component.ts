@@ -42,10 +42,8 @@ export class AdminComponent implements OnInit {
 
   banUser(userId: number) {
     let bannedUser = this.users.find((user) => user.id === userId);
-    console.log(bannedUser);
 
     let bannedUserMail = bannedUser.email;
-    console.log(bannedUserMail);
 
     this.userSrv.addBannedUser({ email: bannedUserMail }).subscribe();
   }
@@ -71,10 +69,9 @@ export class AdminComponent implements OnInit {
   }
 
   getpost() {
-    this.userSrv.getPosts().subscribe((post) => {
+    this.postSrv.getPosts().subscribe((post) => {
       this.posts = post;
       this.updatePostsCount();
-      console.log(post);
     });
   }
 
@@ -82,7 +79,6 @@ export class AdminComponent implements OnInit {
     this.commSrv.getAllComments().subscribe((comments) => {
       this.comments = comments;
       this.updateCommsCount();
-      console.log(comments);
     });
   }
 
