@@ -1,24 +1,52 @@
+* {
+  color: #512918;
+}
+
+i {
+  color: rgb(243, 235, 220);
+}
+
+.header-p {
+  border-bottom: #986e5c 0.5px solid;
+  background-color: #fcfaf6;
+  border-radius: 6px;
+}
+
 .newMargin {
   margin-top: 150px;
 }
 .btn-color {
   background-color: rgb(81, 41, 24);
-  color: rgb(243, 235, 220);
-  border-radius: 15px;
+  border: none;
+  padding: 8px;
 }
 .card {
   border: none;
   background-color: 246;
 }
-.card-header {
-  background-color: rgb(252, 250, 245);
-  color: #512918;
-}
+.card-header,
 .card-body {
   background-color: rgb(252, 250, 245);
-  color: #512918;
 }
+
 button:hover {
   background-color: #79432b;
   color: #f3ebdc;
+}
+
+.containerComments {
+  margin-top: 80px;
+}
+
+input {
+  border: none;
+  padding: 8px 15px;
+  color: #704837;
+}
+
+input:focus-visible,
+input::placeholder {
+  outline-color: #512918;
+  color: #704837;
+  text-align: start;
 }

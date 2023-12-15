@@ -22,28 +22,34 @@
         </button>
       </div>
     </div>
-    <div class="my-3">
+    <!--COMMENTI-->
+    <div
+      class="containerComments d-flex justify-content-center align-items-center"
+    >
       <form (ngSubmit)="createComment(commentForm)">
-        <label for="commentText">New Comment:</label>
         <input
+          class="rounded-start"
           id="commentText"
           type="text"
           [(ngModel)]="commentForm.body"
           name="commentText"
           required
+          placeholder="New comment"
         />
-        <button class="ms-2 btn btn-color" type="submit">
-          <i class="bi bi-send-plus-fill"></i>
+        <button class="btn-color rounded-end" type="submit">
+          <i class="bi bi-plus-lg"></i>
         </button>
       </form>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let comment of comments">
-        <small class="text-body-secondary">
-          {{ comment.id }}
-        </small>
+    <ul class="list-group list-group-flush mt-3">
+      <li
+        class="list-group-item rounded-2 my-1"
+        *ngFor="let comment of comments"
+      >
+        <p class="header-p" *ngIf="currentUser">
+          {{ currentUser.user.nome }} {{ currentUser.user.cognome }}
+        </p>
         <p>{{ comment.body }}</p>
-        <p>{{ comment.userId }}</p>
       </li>
     </ul>
   </div>
