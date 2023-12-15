@@ -1,0 +1,298 @@
+{
+  "users": [
+    {
+      "email": "dario@dario.com",
+      "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
+      "nome": "Dario",
+      "cognome": "Del Giudice",
+      "genre": "male",
+      "city": "Napoli",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "ale@ale.com",
+      "password": "$2a$10$6nwVnEprOuvxnXbrHTYYxujA0/VoyOgL/x2UjCeYcED7GlBItbxqG",
+      "nome": "Alessia",
+      "cognome": "Palmieri",
+      "genre": "female",
+      "city": "Roma",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "stemic@libero.it",
+      "password": "$2a$10$8Ag2NHTVLuwWN14E5ve7Y.zSH6nMraygdmUqkSmBxTcd2Q/SvsBSS",
+      "nome": "Stefano",
+      "cognome": "Miceli",
+      "genre": "male",
+      "city": "Udine",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "email": "platinette@other.com",
+      "password": "$2a$10$mbK6w53.hnLDXaX2Z8aEKeNOO5tVpfeN9ODpo9FwF.5k5CeUsOFZ2",
+      "nome": "Mauro",
+      "cognome": "Platinette",
+      "genre": "other",
+      "city": "Langhirano",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "email": "Alessio@rocc.it",
+      "password": "$2a$10$OPmUVg/U0jq.IeH8uGOJ/u8MAqD9FuJEvs7Ua9uSjlUi7BiYcbU22",
+      "nome": "Alessio",
+      "cognome": "Rocchigiani",
+      "genre": "male",
+      "city": "Castel Viscardo",
+      "role": "user",
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "Scientist",
+      "body": "Why don't scientists trust atoms? Because they make up everything! Ba-dum-tss!"
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "title": "Scarecrow",
+      "body": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+    },
+    {
+      "userId": 2,
+      "id": 12,
+      "title": "zzz",
+      "body": "szzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzz"
+    },
+    {
+      "userId": 3,
+      "id": 13,
+      "title": "Rap God",
+      "body": "Uh, summa-lumma, dooma-lumma, you assumin' I'm a human\nWhat I gotta do to get it through to you I'm superhuman?\nInnovative and I'm made of rubber so that anything\nYou say is ricochetin' off of me, and it'll glue to you and\nI'm devastating, more than ever demonstrating\nHow to give a motherfuckin' audience a feeling like it's levitating\nNever fading, and I know the haters are forever waiting\nFor the day that they can say I fell off, they'll be celebrating"
+    },
+    {
+      "userId": 2,
+      "id": 15,
+      "title": "Jojo's Reference",
+      "body": "ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA"
+    },
+    {
+      "userId": 2,
+      "id": 16,
+      "title": "Average Star Wars Fan:",
+      "body": "May the Force Be With You"
+    },
+    {
+      "userId": 3,
+      "id": 17,
+      "title": "Mario",
+      "body": "It's-a-me, Mario!"
+    },
+    {
+      "userId": 3,
+      "id": 18,
+      "title": "Hi guys",
+      "body": "Hello Friends, I'm new on this forum!"
+    },
+    {
+      "userId": 3,
+      "id": 19,
+      "title": "Gun Sound",
+      "body": "dododoooobrapbrapppraaa"
+    },
+    {
+      "userId": 3,
+      "id": 20,
+      "title": "Rice Burners",
+      "body": "Rice burners go wowowowowowowowowowowowowowowowowowowowowowow"
+    },
+    {
+      "userId": 3,
+      "title": "Oi",
+      "body": "Oi Oi Oi Oi Oi Oi Oi Oi Oi Oi\n",
+      "id": 21
+    },
+    {
+      "userId": 4,
+      "title": "Lawnmower",
+      "body": "Lawnmower goes shersheeeeeeerrerererereeeerrr vavavoom sherererererere",
+      "id": 22
+    },
+    {
+      "userId": 4,
+      "title": "Motorboat",
+      "body": "BURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR drip drip",
+      "id": 23
+    },
+    {
+      "userId": 4,
+      "title": "Lurl",
+      "body": "lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl lurl",
+      "id": 24
+    },
+    {
+      "userId": 4,
+      "title": "Man's Not Hot",
+      "body": "The ting goes skrrrahh, pap pap ka-ka-ka Skidiki-pap-pap, and a puu-puu-poudrrr-boom Skiya, du-du-ku-ku-doom doom Poom poom, you dun now",
+      "id": 25
+    },
+    {
+      "userId": 4,
+      "title": "Planes and Boats",
+      "body": "Planes go WHHHHHHHOOOOOOOOOSSSSSSSSHZZZZZZZZ and Boats go BURRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR drip drip",
+      "id": 26
+    },
+    {
+      "userId": 4,
+      "title": "Aua",
+      "body": "auanuanaunauanaunauanuanaunaua",
+      "id": 27
+    },
+    {
+      "userId": 5,
+      "title": "Spinkler",
+      "body": "My sprinkler goes like thisstststststststststststststststststststststststst and comes back like titttttttttttttttttttttttttttttttttttttte",
+      "id": 28
+    },
+    {
+      "userId": 5,
+      "title": "Banana",
+      "body": "bananananananabanabananabanannanabanananana",
+      "id": 30
+    },
+    {
+      "userId": 5,
+      "title": "@",
+      "body": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "id": 31
+    },
+    {
+      "userId": 5,
+      "title": "boh",
+      "body": "#######*******",
+      "id": 32
+    },
+    {
+      "userId": 5,
+      "title": "Cats",
+      "body": "Don't you just hate it when your cat wakes you up like this? Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow. Meow.",
+      "id": 33
+    },
+    {
+      "userId": 5,
+      "title": ":o",
+      "body": ":a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a: :a:",
+      "id": 34
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Great post! I totally agree with your thoughts on the subject.",
+      "postId": 9,
+      "userId": 2
+    },
+    {
+      "postId": 9,
+      "body": "Hmm, I never thought of it that way. Thanks for providing a different perspective.",
+      "id": 2,
+      "userId": 3
+    },
+    {
+      "postId": 10,
+      "body": "Interesting topic! Can anyone recommend any good TTS software?",
+      "id": 4,
+      "userId": 4
+    },
+    {
+      "postId": 10,
+      "body": "I found the content a bit confusing, could you clarify your main point?",
+      "id": 5,
+      "userId": 5
+    },
+    {
+      "postId": 11,
+      "body": "I appreciate how well-researched and informative this post is.",
+      "id": 6,
+      "userId": 4
+    },
+    {
+      "postId": 11,
+      "body": "I have personally experienced the benefits of TTS technology, it's truly amazing!",
+      "id": 7,
+      "userId": 4
+    },
+    {
+      "postId": 12,
+      "body": "This post is really informative, keep up the good work!",
+      "id": 8,
+      "userId": 5
+    },
+    {
+      "postId": 12,
+      "body": "I'm really enjoying this discussion, it's giving me new insights.",
+      "id": 9,
+      "userId": 5
+    },
+    {
+      "postId": 13,
+      "body": "It's refreshing to see a post that approaches the topic from a unique angle.",
+      "id": 10,
+      "userId": 3
+    },
+    {
+      "postId": 13,
+      "body": "Interesting post! Can you provide some sources to back up your claims?",
+      "id": 11,
+      "userId": 5
+    },
+    {
+      "postId": 14,
+      "body": "Your post really resonated with me - I've had a similar experience.",
+      "id": 12,
+      "userId": 5
+    },
+    {
+      "postId": 14,
+      "body": "Well written! Your post is incredibly persuasive.",
+      "id": 13,
+      "userId": 3
+    },
+    {
+      "postId": 15,
+      "body": "I find this topic intriguing, but I'd love to hear more examples to support your point.",
+      "id": 14,
+      "userId": 3
+    },
+    {
+      "postId": 15,
+      "body": "Wow, I never thought about it that way before. Thanks for sharing!",
+      "id": 15,
+      "userId": 2
+    },
+    {
+      "postId": 16,
+      "body": "This post really got me thinking, great job!",
+      "id": 16,
+      "userId": 2
+    },
+    {
+      "postId": 16,
+      "body": "Cool!",
+      "id": 17,
+      "userId": 1
+    }
+  ],
+  "bannedUsers": [
+    {
+      "id": 1,
+      "email": "ale@ale1.com"
+    }
+  ]
+}
