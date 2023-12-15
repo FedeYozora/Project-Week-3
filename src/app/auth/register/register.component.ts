@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   registra(form: NgForm) {
     if (this.bannedUser.includes(form.value.email)) {
-      alert('email bannata');
+      alert('Stop, questa mail é bandita');
       return;
     }
     try {
@@ -43,7 +43,6 @@ export class RegisterComponent implements OnInit {
   checkUser() {
     this.authSrv.checkEmail().subscribe((data) => {
       this.bannedUser = data.map((user) => user.email);
-      console.log(this.bannedUser);
     });
   }
 }

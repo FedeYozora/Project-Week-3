@@ -51,6 +51,9 @@ export class AuthService {
     cognome: string;
     email: string;
     password: string;
+    genre: string;
+    role: string;
+    city: string;
   }) {
     return this.http.post(`${this.apiURL}/register`, data).pipe(
       tap(() => {
