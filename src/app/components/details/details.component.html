@@ -46,9 +46,7 @@
         class="list-group-item rounded-2 my-1"
         *ngFor="let comment of comments"
       >
-        <p class="header-p" *ngIf="currentUser">
-          {{ currentUser.user.nome }} {{ currentUser.user.cognome }}
-        </p>
+        <p class="header-p ps-2" *ngIf="currentUser">Anonymous</p>
         <p>{{ comment.body }}</p>
       </li>
     </ul>
