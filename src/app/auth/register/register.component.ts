@@ -25,6 +25,10 @@ export class RegisterComponent implements OnInit {
   }
 
   registra(form: NgForm) {
+    if (this.bannedUser.includes(form.value.email)) {
+      alert('email bannata');
+      return;
+    }
     try {
       this.authSrv.register(form.value).subscribe();
       this.router.navigate(['/login']);
@@ -39,11 +43,8 @@ export class RegisterComponent implements OnInit {
 
   checkUser() {
     this.authSrv.checkEmail().subscribe((data) => {
-      let usersBanned = data;
-      console.log(data);
-      this.bannedUser = usersBanned.map((userBanned) => {
-        return userBanned.email;
-      });
+      this.bannedUser = data.map((user) => user.email);
+      console.log(this.bannedUser);
     });
   }
 }

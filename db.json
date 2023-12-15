@@ -38,6 +38,24 @@
       "genre": "male",
       "city": "dfdfd",
       "id": 5
+    },
+    {
+      "email": "peppe.barresi1@gmail.com",
+      "password": "$2a$10$0C0/KDKY273bILPlbz29mOLiHxmYhseRI1XVVHAYt7YFmPjeeKgVC",
+      "nome": "Giuseppe",
+      "cognome": "Barresi",
+      "genre": "male",
+      "city": "roma",
+      "id": 6
+    },
+    {
+      "email": "federico@gmail.com",
+      "password": "$2a$10$Bd9zXq..cH12RqpsuXWzv.SYmrtuv6YI482tBTfFdfPrnMr3Vawp2",
+      "nome": "Federico",
+      "cognome": "Bonfiglio",
+      "genre": "male",
+      "city": "Napoli",
+      "id": 7
     }
   ],
   "posts": [
