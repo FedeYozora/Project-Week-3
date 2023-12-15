@@ -63,9 +63,9 @@ export class AuthService {
   }
 
   updateUserInfo(updatedInfo: any, id: number) {
-    return this.http.put(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
+    return this.http.patch(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
       tap(() => {
-        this.utente = { ...this.utente, ...updatedInfo };
+        this.utente = { ...updatedInfo };
       }),
       catchError(this.errors)
     );
