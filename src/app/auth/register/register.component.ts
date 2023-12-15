@@ -3,7 +3,6 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
-import { BannedMail } from 'src/app/models/banned-mail';
 
 @Component({
   selector: 'app-register',
