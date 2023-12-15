@@ -27,7 +27,12 @@ export class RegisterComponent implements OnInit {
 
   registra(form: NgForm) {
     if (this.bannedUser.includes(form.value.email)) {
-      alert('Stop, questa mail é bandita');
+      const audio = new Audio();
+      audio.src = '../../../assets/Stop.mp3';
+      setTimeout(() => {
+        audio.play();
+      });
+      // alert('Stop, questa mail é bandita');
       return;
     }
     if (!this.admin) {

@@ -41,10 +41,10 @@
       "id": 4
     },
     {
-      "email": "dada@dada.da",
+      "email": "Alessio@rocc.it",
       "password": "$2a$10$OPmUVg/U0jq.IeH8uGOJ/u8MAqD9FuJEvs7Ua9uSjlUi7BiYcbU22",
-      "nome": "dad",
-      "cognome": "dada",
+      "nome": "Alessio",
+      "cognome": "Rocchigiani",
       "genre": "male",
       "city": "Castel Viscardo",
       "role": "user",
@@ -71,7 +71,7 @@
       "body": "szzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzzszzzzzzsuzzzzzsuzzzzz"
     },
     {
-      "userId": 2,
+      "userId": 3,
       "id": 13,
       "title": "Rap God",
       "body": "Uh, summa-lumma, dooma-lumma, you assumin' I'm a human\nWhat I gotta do to get it through to you I'm superhuman?\nInnovative and I'm made of rubber so that anything\nYou say is ricochetin' off of me, and it'll glue to you and\nI'm devastating, more than ever demonstrating\nHow to give a motherfuckin' audience a feeling like it's levitating\nNever fading, and I know the haters are forever waiting\nFor the day that they can say I fell off, they'll be celebrating"
@@ -137,7 +137,7 @@
       "id": 24
     },
     {
-      "userId": 2,
+      "userId": 4,
       "title": "Man's Not Hot",
       "body": "The ting goes skrrrahh, pap pap ka-ka-ka Skidiki-pap-pap, and a puu-puu-poudrrr-boom Skiya, du-du-ku-ku-doom doom Poom poom, you dun now",
       "id": 25
@@ -149,7 +149,7 @@
       "id": 26
     },
     {
-      "userId": 2,
+      "userId": 5,
       "title": "Aua",
       "body": "auanuanaunauanaunauanuanaunaua",
       "id": 27
@@ -289,5 +289,10 @@
       "userId": 1
     }
   ],
-  "bannedUsers": []
+  "bannedUsers": [
+    {
+      "id": 1,
+      "email": "ale@ale1.com"
+    }
+  ]
 }
