@@ -3,6 +3,7 @@ import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
+import { BannedMail } from 'src/app/models/banned-mail';
 
 @Component({
   selector: 'app-register',
@@ -11,9 +12,11 @@ import { User } from 'src/app/models/user';
 })
 export class RegisterComponent implements OnInit {
   admin!: User | null;
+  bannedUser: any = [];
   constructor(private authSrv: AuthService, private router: Router) {}
 
   ngOnInit(): void {
+    this.checkUser();
     let utente = localStorage.getItem('user');
     if (utente) {
       let isUser = JSON.parse(utente);
@@ -24,6 +27,10 @@ export class RegisterComponent implements OnInit {
   }
 
   registra(form: NgForm) {
+    if (this.bannedUser.includes(form.value.email)) {
+      alert('email bannata');
+      return;
+    }
     try {
       this.authSrv.register(form.value).subscribe();
       this.router.navigate(['/login']);
@@ -34,5 +41,12 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/register']);
       }
     }
+  }
+
+  checkUser() {
+    this.authSrv.checkEmail().subscribe((data) => {
+      this.bannedUser = data.map((user) => user.email);
+      console.log(this.bannedUser);
+    });
   }
 }
