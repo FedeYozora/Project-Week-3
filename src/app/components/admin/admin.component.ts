@@ -71,7 +71,7 @@ export class AdminComponent implements OnInit {
   }
 
   getpost() {
-    this.userSrv.getPosts().subscribe((post) => {
+    this.postSrv.getPosts().subscribe((post) => {
       this.posts = post;
       this.updatePostsCount();
       console.log(post);

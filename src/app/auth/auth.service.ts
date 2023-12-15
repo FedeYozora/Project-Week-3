@@ -5,8 +5,6 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { BehaviorSubject, throwError, tap, catchError } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { BannedMail } from '../models/banned-mail';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -93,9 +91,5 @@ export class AuthService {
         return throwError('Errore nella chiamata');
         break;
     }
-  }
-
-  checkEmail(): Observable<BannedMail[]> {
-    return this.http.get<BannedMail[]>(`${this.apiURL}/bannedUsers`);
   }
 }

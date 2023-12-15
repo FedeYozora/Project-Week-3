@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 import { Post } from 'src/app/models/post';
 
@@ -10,11 +10,22 @@ import { Post } from 'src/app/models/post';
 export class HomeComponent implements OnInit {
   posts!: Post[];
   searchInput!: string;
+  idleTimer!: any;
+  counter: number = 0;
 
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.getPosts();
+    this.startTimer();
+  }
+
+  @HostListener('document:mousemove')
+  @HostListener('document:keypress')
+  resetTimer(): void {
+    clearTimeout(this.idleTimer);
+    this.startTimer();
+    this.counter = 0;
   }
 
   getPosts(): void {
@@ -38,5 +49,22 @@ export class HomeComponent implements OnInit {
     this.posts = this.posts.filter((post) =>
       post.title.toLowerCase().includes(this.searchInput.toLowerCase())
     );
+  }
+
+  startTimer(): void {
+    this.idleTimer = setTimeout(() => {
+      this.counter++;
+      console.log(this.counter);
+      if (this.counter >= 30) {
+        const audio = new Audio('../../../assets/Boring Elevator Music.mp3');
+        audio.play();
+        this.counter = 0;
+      }
+      this.startTimer();
+    }, 1000);
+  }
+
+  ngOnDestroy(): void {
+    clearTimeout(this.idleTimer);
   }
 }

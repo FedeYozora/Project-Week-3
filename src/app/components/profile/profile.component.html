@@ -1,8 +1,8 @@
 <div
   class="container-fluid p-3 d-flex flex-column"
-  style="height: calc(100vh - 1px); overflow-y: auto"
+  style="height: calc(100vh - 86px); margin-top: 86px; overflow-y: auto"
 >
-  <div class="row scrollable" style="margin-top: 200px">
+  <div class="row scrollable">
     <div class="d-flex justify-content-center align-items-center mx-auto">
       <div class="card p-4 shadow cardAvatar">
         <div
@@ -11,13 +11,13 @@
           <button class="btn btn-secondary imageProfile">
             <img
               *ngIf="currentUser && currentUser.user.genre === 'male'"
-              src="https://openclipart.org/image/800px/313668"
-              height="100"
+              src="../../../assets/male.png"
+              height="85"
               width="85"
             />
             <img
               *ngIf="currentUser && currentUser.user.genre === 'female'"
-              src="https://i.imgur.com/wvxPV9S.png"
+              src="../../../assets/female.png"
               height="100"
               width="100"
             />
