@@ -53,6 +53,9 @@ export class AuthService {
     city: string;
     email: string;
     password: string;
+    genre: string;
+    role: string;
+    city: string;
   }) {
     return this.http.post(`${this.apiURL}/register`, data).pipe(
       tap(() => {
@@ -62,9 +65,9 @@ export class AuthService {
   }
 
   updateUserInfo(updatedInfo: any, id: number) {
-    return this.http.put(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
+    return this.http.patch(`${this.apiURL}/users/${id}`, updatedInfo).pipe(
       tap(() => {
-        this.utente = { ...this.utente, ...updatedInfo };
+        this.utente = { ...updatedInfo };
       }),
       catchError(this.errors)
     );

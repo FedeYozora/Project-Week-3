@@ -271,6 +271,12 @@
       "body": "ciao",
       "id": 16,
       "userId": 2
+    },
+    {
+      "postId": 16,
+      "body": "Cool!",
+      "id": 17,
+      "userId": 1
     }
   ],
   "bannedUsers": []

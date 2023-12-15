@@ -12,6 +12,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
+  currentUser: any;
+  posts!: Post[];
   post: Post | undefined;
   comments!: any;
   commentForm: PostComment = {
@@ -37,6 +39,13 @@ export class DetailsComponent implements OnInit {
         });
       }
     });
+
+    this.currentUser = this.userSrv.getUserFromLocalStorage();
+    this.postSrv
+      .getPostsByUserId(this.currentUser.user.id)
+      .subscribe((posts) => {
+        this.posts = posts;
+      });
   }
 
   createComment(comment: PostComment) {
