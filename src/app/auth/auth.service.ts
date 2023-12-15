@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthData } from './auth-data';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
-import { BehaviorSubject, throwError, tap, catchError } from 'rxjs';
+import { BehaviorSubject, throwError, tap, catchError, map } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BannedMail } from '../models/banned-mail';
 import { Observable } from 'rxjs';
@@ -97,5 +97,19 @@ export class AuthService {
 
   checkEmail(): Observable<BannedMail[]> {
     return this.http.get<BannedMail[]>(`${this.apiURL}/bannedUsers`);
+  }
+
+  checkBannedEmail(email: BannedMail): Observable<boolean> {
+    return this.http
+      .get<{ bannedUsers: BannedMail[] }>('http://localhost:4201/bannedUsers')
+      .pipe(
+        map((data) => {
+          if (data && data.bannedUsers) {
+            return data.bannedUsers.includes(email);
+          } else {
+            return false;
+          }
+        })
+      );
   }
 }
